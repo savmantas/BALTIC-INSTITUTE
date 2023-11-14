@@ -1,9 +1,18 @@
-.login-page{width: 1366px ; height: 768; display:flex; background-color: rgb(98, 93, 93); align-items:;}
-
-.image{display: flex; width: 500px; height: 768px; align-items:end;}
-
-.on-top{display: flex; width: 476px; height: 744px; background-color:rgb(111, 111, 182); position: absolute; top: 20px; left: 20px; opacity: 0.2;}
-
-.logo{position: absolute; top: 80px; left: 80px; display: flex; width: 240.7px; height: 49px;}
-
-.letters{position: absolute; top: 40px; left: 40px; display: flex; height: 223px; width: 428px;}
+.login-page{
+    width: 1366px ; height: 768; display:flex; background-color: rgb(98, 93, 93);
+}
+.image{
+    display: flex; width: 500px; height: 768px; align-items:end;
+}
+.on-top{
+    display: flex; width: 476px; height: 744px; background-color:rgb(111, 111, 182); position: absolute; top: 20px; left: 20px; opacity: 0.2;
+}
+.logo{
+    position: absolute; top: 80px; left: 80px; display: flex; width: 240.7px; height: 49px;
+}
+.letters{
+    position: absolute; top: 40px; left: 40px; display: flex; height: 223px; width: 428px;
+}
+.text{display: flex; position: absolute; top: 150px; left: 80px; height: 56px; width: 310px; font-size: 18px; font-family: 'Open Sans', sans-serif;
+; color: white; padding: 8px; padding: 8px; font-size: 17px;
+}
