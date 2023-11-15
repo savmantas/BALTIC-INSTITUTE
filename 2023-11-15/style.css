@@ -1,5 +1,5 @@
 .login-page{
-    width: 1366px ; height: 768; display:flex; background-color: rgb(98, 93, 93);
+    width: 1366px ; height: 768; display:flex; background-color: rgb(173, 171, 171); position: absolute;
 }
 .image{
     display: flex; width: 500px; height: 768px;
@@ -16,3 +16,5 @@
 .text{display: flex; position: absolute; top: 150px; left: 80px; height: 56px; width: 310px; font-size: 18px; font-family: 'Open Sans', sans-serif;
 ; color: white; padding: 8px; padding: 8px; font-size: 17px;
 }
+.details{display: flex; height: 768px; width: 856px; position: absolute; left: 520px;}
+.line1 .line2 {display: flex;}
