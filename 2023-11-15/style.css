@@ -5,10 +5,10 @@
     display: flex; width: 500px; height: 768px;
 }
 .on-top{
-    display: flex; width: 476px; height: 744px; background-color:rgb(111, 111, 182); position: absolute; top: 20px; left: 20px; opacity: 0.2;
+    display: flex; width: 476px; height: 744px; background-color:rgb(111, 111, 182); position: absolute; top: 20px; left: 24px; opacity: 0.2;
 }
 .logo{
-    position: absolute; top: 80px; left: 80px; display: flex; width: 240.7px; height: 49px;
+    position: absolute; top: 80px; left: 85px; display: flex; width: 240.7px; height: 49px;
 }
 .letters{
     position: absolute; top: 40px; left: 40px; display: flex; height: 223px; width: 428px;
