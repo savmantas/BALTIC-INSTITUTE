@@ -92,8 +92,8 @@ nav.navbar li.active a {
   display: flex;
   gap: 0.5rem;
   --bs-btn-hover-color: #121010;
-  --bs-btn-hover-bg: #EEEEEE;
-  --bs-btn-hover-border-color:#19182587;
+  --bs-btn-hover-bg: #eeeeee;
+  --bs-btn-hover-border-color: #19182587;
   --bs-btn-color: #0e0e0faf;
   --bs-btn-border-color: #35383e2d;
 }
@@ -155,28 +155,32 @@ nav.navbar li.active a {
     height: 100vh;
     width: 280px;
     border-right: 1px solid rgb(60, 58, 58);
-    transition: left .5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+  }
+
+  nav.navbar::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    background-color: rgba(0, 0, 0, 0.424);
+    width: calc(100vw - 280px);
+    height: 100vh;
+    transition: left 0.5s ease-in-out;
+  }
+
+  input[name="nav-toggler"]:checked + nav {
+    display: block;
+    left: 0;
+  }
+
+  input[name="nav-toggler"]:checked + nav::after {
+    left: 280px;
+  }
 }
 
-nav.navbar::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  background-color: rgba(0, 0, 0, 0.424);
-  width: calc(100vw - 280px);
-  height: 100vh;
-  transition: left .5s ease-in-out;
+@media screen and (max-width: 768px) {
+section.home h2, section.home span {
+  font-size: 40px;
 }
-
-input[name="nav-toggler"]:checked + nav {
-display: block;
-left: 0;
-}
-
-input[name="nav-toggler"]:checked + nav::after {
-left: 280px;
-}
-
-
 }

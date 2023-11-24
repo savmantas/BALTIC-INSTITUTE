@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <header class="py-4">
-        <div class="container-lg d-flex justify-content-between align-items-center">
+    <header>
+        <div class="container-lg d-flex justify-content-between align-items-center flex-row-reverse flex-md-row ">
             <div class="d-block d-lg-none menu">
                 <label class="hamburger" for="nav-toggler"></label>
             </div>
@@ -24,7 +24,8 @@
             </div>
             <input type="checkbox" id="nav-toggler" name="nav-toggler" class="d-none">
             <nav class="navbar navbar-expand">
-                <label class="close-offcanvas fs-1 position-absolute top-0 d-lg-none" for="nav-toggler" style="right: 1rem;">
+                <label class="close-offcanvas fs-1 position-absolute top-0 d-lg-none" for="nav-toggler"
+                    style="right: 1rem;">
                     <img src="assets/icons/x-lg.svg" alt="icons">
                 </label>
                 <ul class="navbar-nav flex-column flex-lg-row gap-lg-5 gap-4">
@@ -34,7 +35,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <ul class="navbar-nav flex-row">
+            <ul class="navbar-nav flex-row d-none d-md-flex">
                 <li><a href="#" class="btn btn-empty">Log In</a></li>
                 <li><a href="#" class="btn btn-primary">Sign Up</a></li>
             </ul>
@@ -44,7 +45,7 @@
         <section class="home">
             <div class="container-lg">
                 <div class="row flex-wrap-reverse flex-lg-wrap">
-                    <div class="col-lg-5 col-xl-4 pt-5">
+                    <div class="col-lg-5 col-xl-4 pt-5 text-center text-lg-start">
                         <div class="link">
                             <a href="#" class="btn btn-shadow">Explore the world!</a>
                         </div>
@@ -55,7 +56,7 @@
                             We always make our customer happy by providing as many choices
                             as possible
                         </p>
-                        <div class="buttons mt-5">
+                        <div class="buttons mt-5 justify-content-center justify-content-lg-start flex-md-row flex-column ">
                             <a href="#" class="btn btn-primary">Get started</a>
                             <a href="#" class="btn btn-outline-primary">Watch Demo</a>
                         </div>
