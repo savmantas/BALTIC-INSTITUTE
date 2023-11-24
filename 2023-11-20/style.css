@@ -24,8 +24,13 @@ body {
   font-family: "circularstd";
 }
 
+img {
+  max-width: 100%;
+}
+
 nav.navbar {
   font-size: 14px;
+  display: none;
 }
 
 header {
@@ -48,6 +53,11 @@ nav.navbar li.active a {
   font-weight: 600;
 }
 
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
 .btn-primary {
   --bs-btn-bg: #5d50c6;
   --bs-btn-hover-bg: #6d4db3;
@@ -56,15 +66,18 @@ nav.navbar li.active a {
   font-size: 14px;
   color: #eeeeee;
   box-shadow: 0 15px 15px 0 rgba(28, 51, 176, 0.363);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-shadow {
-box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.097);
---bs-btn-color: #F85E9F;
-font-size: 14px;
-display: inline-flex;
-gap: 10px;
-align-items: center;
+  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.097);
+  --bs-btn-color: #f85e9f;
+  font-size: 14px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .btn-shadow::after {
@@ -75,17 +88,20 @@ align-items: center;
   display: block;
 }
 .btn-outline-primary {
-  border-color: #19182515;
-  color: #191825b5;
-  font-weight: 600;
-  font-size: 14px;
-  display: inline-flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  --bs-btn-hover-color: #121010;
+  --bs-btn-hover-bg: #EEEEEE;
+  --bs-btn-hover-border-color:#19182587;
+  --bs-btn-color: #0e0e0faf;
+  --bs-btn-border-color: #35383e2d;
 }
 
 .btn-outline-primary::before {
   content: "";
-  background: url(assets/icons/playarrow.svg);
+  background: url(assets/icons/playarrow.svg) no-repeat center center;
   width: 24px;
   height: 24px;
   display: block;
@@ -101,7 +117,7 @@ align-items: center;
   font-size: 69px;
   font-weight: 600;
   line-height: 120%;
-  color: #F85E9F;
+  color: #f85e9f;
 }
 
 .home p {
@@ -112,5 +128,43 @@ align-items: center;
 
 .companys {
   display: flex-;
-  justify-content:space-between;
+  justify-content: space-between;
+}
+
+.hamburger {
+  border: none;
+  width: 48px;
+  height: 49px;
+  background: url(assets/icons/hamburger.svg) no-repeat center center;
+}
+
+@media screen and (min-width: 992px) {
+  nav.navbar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    background: white;
+    padding: 1rem;
+    z-index: 1000;
+    height: 100vh;
+    width: 280px;
+    border-right: 1px solid rgb(60, 58, 58)
+}
+
+nav.navbar::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.424);
+  width: calc(100vw - 280px);
+  height: 100vh;
+}
 }

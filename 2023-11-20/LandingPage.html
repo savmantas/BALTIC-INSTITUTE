@@ -15,12 +15,15 @@
 
 <body>
     <header class="py-4">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <img src="assets/logos/1.svg" alt="Logos" />
+        <div class="container-lg d-flex justify-content-between align-items-center">
+            <div class="d-block d-lg-none menu">
+                <button class="hamburger"></button>
+            </div>
+            <div class="logo">
+                <img src="assets/logos/1.svg" alt="Logotipas" />
             </div>
             <nav class="navbar navbar-expand">
-                <ul class="navbar-nav gap-4">
+                <ul class="navbar-nav flex-column flex-lg-row gap-lg-5 gap-4">
                     <li class="active"><a href="">Home</a></li>
                     <li><a href="#">Discover</a></li>
                     <li><a href="#">Special Deals</a></li>
@@ -35,9 +38,9 @@
     </header>
     <main>
         <section class="home">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 pt-5">
+            <div class="container-lg">
+                <div class="row flex-wrap-reverse flex-lg-wrap">
+                    <div class="col-lg-5 col-xl-4 pt-5">
                         <div class="link">
                             <a href="#" class="btn btn-shadow">Explore the world!</a>
                         </div>
@@ -53,8 +56,8 @@
                             <a href="#" class="btn btn-outline-primary">Watch Demo</a>
                         </div>
                     </div>
-                    <div class="col-8">
-                        <img src="assets/images/home.png" alt="Home" />
+                    <div class="col-lg-7 col-xl-8 col-12">
+                        <img src="assets/images/home.png" alt="Home" style="margin-bottom: -15%;"/>
                     </div>
                 </div>
             </div>
