@@ -28,6 +28,12 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 nav.navbar {
   font-size: 14px;
 }
@@ -44,6 +50,21 @@ nav.navbar a {
 
 nav.navbar li.active a {
   color: #191825;
+}
+
+section.home{
+position: relative;
+}
+
+section.home::before {
+  content: "";
+  background: url(assets/images/2orange.png) no-repeat center center;
+  width: 65px;
+  height: 170px;
+  display: block;
+  position: absolute;
+  bottom: 0rem;
+  left: 1rem;
 }
 
 .btn {
@@ -182,5 +203,8 @@ nav.navbar li.active a {
 @media screen and (max-width: 768px) {
 section.home h2, section.home span {
   font-size: 40px;
+}
+section.home::before {
+  display: none;
 }
 }
