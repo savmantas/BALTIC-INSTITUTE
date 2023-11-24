@@ -55,5 +55,62 @@ nav.navbar li.active a {
   font-weight: 600;
   font-size: 14px;
   color: #eeeeee;
+  box-shadow: 0 15px 15px 0 rgba(28, 51, 176, 0.363);
 }
 
+.btn-shadow {
+box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.097);
+--bs-btn-color: #F85E9F;
+font-size: 14px;
+display: inline-flex;
+gap: 10px;
+align-items: center;
+}
+
+.btn-shadow::after {
+  content: "";
+  background: url(assets/icons/bag.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.btn-outline-primary {
+  border-color: #19182515;
+  color: #191825b5;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.btn-outline-primary::before {
+  content: "";
+  background: url(assets/icons/playarrow.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.home h2 {
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.home h2 span {
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #F85E9F;
+}
+
+.home p {
+  font-family: Inter;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.347);
+}
+
+.companys {
+  display: flex-;
+  justify-content:space-between;
+}
