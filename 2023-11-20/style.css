@@ -18,6 +18,7 @@
 
 :root {
   --bs-border-radius: 3rem;
+  --primary-color: #f85e9f;
 }
 
 body {
@@ -52,8 +53,8 @@ nav.navbar li.active a {
   color: #191825;
 }
 
-section.home{
-position: relative;
+section.home {
+  position: relative;
 }
 
 section.home::before {
@@ -93,7 +94,7 @@ section.home::before {
 
 .btn-shadow {
   box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.097);
-  --bs-btn-color: #f85e9f;
+  --bs-btn-color: var(--primary-color);
   font-size: 14px;
   display: inline-flex;
   gap: 10px;
@@ -134,10 +135,7 @@ section.home::before {
 }
 
 .home h2 span {
-  font-size: 69px;
-  font-weight: 600;
-  line-height: 120%;
-  color: #f85e9f;
+  color: var(--primary-color);
 }
 
 .home p {
@@ -156,6 +154,21 @@ section.home::before {
   width: 48px;
   height: 49px;
   background: url(assets/icons/hamburger.svg) no-repeat center center;
+}
+
+.section-heading h3 {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.section-heading h2 {
+  font-size: 44px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 120%;
+  margin: 1rem 0 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -201,10 +214,32 @@ section.home::before {
 }
 
 @media screen and (max-width: 768px) {
-section.home h2, section.home span {
-  font-size: 40px;
+  section.home h2 {
+    font-size: 40px;
+
+  }
+  section.home::before {
+    display: none;
+  }
 }
-section.home::before {
-  display: none;
+
+@media screen and (min-width: 1400px) {
+  .p-custom {
+    padding-left: 98px;
+  }
 }
+
+@media screen and (max-width: 1200px) {
+  .section-heading h2 {
+    font-size: 40px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .section-heading h2 {
+    font-size: 32px;
+  }
+  .section-heading h3 {
+    font-size: 16px;
+  }
 }
