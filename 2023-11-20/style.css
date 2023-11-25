@@ -171,6 +171,30 @@ section.home::before {
   margin: 1rem 0 0;
 }
 
+.service {
+height: 100%;
+transition: all .5s ease-in-out;
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service:hover {
+  box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.1);
+  border-color: white;
+}
+
+.service h3 {
+font-weight: 600;
+font-size: 28px;
+}
+
+.service p {
+  font-family: Inter;
+  color:#19182581;
+  font-size: 18px;
+}
+
+
+
 @media screen and (min-width: 992px) {
   nav.navbar {
     display: block;
@@ -225,7 +249,11 @@ section.home::before {
 
 @media screen and (min-width: 1400px) {
   .p-custom {
-    padding-left: 98px;
+    padding-left: 144px;
+  }
+
+  .container-lg {
+    max-width: 1184px;
   }
 }
 
