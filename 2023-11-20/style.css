@@ -267,6 +267,52 @@ section.home::before {
 fill: white;
 }
 
+.travel p {
+  font-family: Inter;
+  color: #19182550;
+  font-size: 18px;
+  margin: 1.5rem 0 4rem;
+}
+
+.feature {
+  border: 1px solid rgba(36, 35, 35, 0.1);
+  text-align: center;
+  border-radius: 25px;
+  padding-top: 2rem 0;
+}
+
+.feature h3 {
+  color: #FF5722;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0 0 .7rem;
+}
+
+.featur span {
+  font-family: Inter;
+  color: #191825;
+  font-size: 18px;
+}
+
+.travel .image {
+  background: url(assets/images/travelgirl.png) no-repeat center right / cover;
+  height: 100%;
+  position: relative;
+}
+
+.travel .image::before {
+  content:"";
+  background-color: #facd49;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
 @media screen and (min-width: 992px) {
   nav.navbar {
     display: block;
