@@ -244,7 +244,7 @@ section.home::before {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .arrows {
@@ -255,7 +255,7 @@ section.home::before {
 
 .arrows svg {
   fill: #191825;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .arrows a:hover {
@@ -264,7 +264,7 @@ section.home::before {
 }
 
 .arrows a:hover svg {
-fill: white;
+  fill: white;
 }
 
 .travel p {
@@ -282,10 +282,10 @@ fill: white;
 }
 
 .feature h3 {
-  color: #FF5722;
+  color: #ff5722;
   font-size: 35px;
   font-weight: bold;
-  margin: 0 0 .7rem;
+  margin: 0 0 0.7rem;
 }
 
 .featur span {
@@ -301,7 +301,7 @@ fill: white;
 }
 
 .travel .image::before {
-  content:"";
+  content: "";
   background-color: #facd49;
   display: block;
   height: 514px;
@@ -319,10 +319,10 @@ footer {
 footer p {
   color: #19182599;
   font-size: 23px;
-  margin:  2rem 0 0;
+  margin: 2rem 0 0;
 }
 
-footer .social ul{
+footer .social ul {
   display: flex;
   gap: 1rem;
 }
@@ -340,11 +340,12 @@ footer .social a svg {
   fill: white;
 }
 
-footer .footer-links a, footer .footer-links li {
-font-family: Inter;
-font-size: 18px;
-color: #1918259f;
-text-decoration: none;
+footer .footer-links a,
+footer .footer-links li {
+  font-family: Inter;
+  font-size: 18px;
+  color: #1918259f;
+  text-decoration: none;
 }
 
 footer .footer-links a:hover {
@@ -352,7 +353,7 @@ footer .footer-links a:hover {
 }
 
 footer .footer-links li {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 footer h3 {
@@ -389,14 +390,17 @@ footer h3 {
 }
 
 .schedule h3 {
-font-size: 23px;
-font-weight: bold;
+  font-size: 23px;
+  font-weight: bold;
 }
 
-.schedule1 p, .schedule2 p, .schedule3 p{
-font-size: 18px;
-font-family: Inter;
-color: #1918257e;
+.schedule1 p,
+.schedule2 p,
+.schedule3 p,
+.section-heading p {
+  font-size: 18px;
+  font-family: Inter;
+  color: #1918257e;
 }
 
 .borderr {
@@ -410,7 +414,9 @@ color: #1918257e;
   border-color: white;
 }
 
-.schedule1, .schedule2, .schedule3 {
+.schedule1,
+.schedule2,
+.schedule3 {
   gap: 35px;
 }
 
@@ -490,10 +496,10 @@ color: #1918257e;
   .travel .image {
     height: 697px;
     background-size: cover;
-}
-.travel .image::before {
-  display: none;
-}
+  }
+  .travel .image::before {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .section-heading h2 {
@@ -505,5 +511,4 @@ color: #1918257e;
   .travel .image {
     height: 320px;
   }
-
 }
