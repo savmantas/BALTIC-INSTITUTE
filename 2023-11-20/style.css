@@ -313,6 +313,7 @@ fill: white;
 
 footer {
   padding-bottom: 2rem;
+  padding-top: 50rem;
 }
 
 footer p {
@@ -357,6 +358,68 @@ footer .footer-links li {
 footer h3 {
   font-weight: bold;
   font-size: 23px;
+  font-family: Inter;
+}
+
+.schedule1::before {
+  content: "";
+  display: block;
+  background: url(assets/icons/lokation.svg);
+  height: 100px;
+  width: 100px;
+  border-radius: 25%;
+}
+
+.schedule2::before {
+  content: "";
+  display: block;
+  background: url(assets/icons/scalendar.svg);
+  height: 100px;
+  width: 100px;
+  border-radius: 25%;
+}
+
+.schedule3::before {
+  content: "";
+  display: block;
+  background: url(assets/icons/pink.svg);
+  height: 100px;
+  width: 100px;
+  border-radius: 25%;
+}
+
+.schedule h3 {
+font-size: 23px;
+font-weight: bold;
+}
+
+.schedule1 p, .schedule2 p, .schedule3 p{
+font-size: 18px;
+font-family: Inter;
+color: #1918257e;
+}
+
+.borderr {
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  border: white;
+}
+
+.borderr:hover {
+  box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.1);
+  border-color: white;
+}
+
+.schedule1, .schedule2, .schedule3 {
+  gap: 35px;
+}
+
+.key {
+  margin-top: 7rem;
+}
+
+.shelf {
+  margin-top: 6rem;
 }
 
 @media screen and (min-width: 992px) {
