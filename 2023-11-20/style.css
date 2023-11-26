@@ -166,7 +166,7 @@ section.home::before {
 .section-heading h2 {
   font-size: 44px;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   line-height: 120%;
   margin: 1rem 0 0;
 }
@@ -269,16 +269,16 @@ fill: white;
 
 .travel p {
   font-family: Inter;
-  color: #19182550;
+  color: #1918259c;
   font-size: 18px;
-  margin: 1.5rem 0 4rem;
+  margin-top: 1.5rem 0 4rem;
 }
 
 .feature {
   border: 1px solid rgba(36, 35, 35, 0.1);
   text-align: center;
   border-radius: 25px;
-  padding-top: 2rem 0;
+  padding: 2rem 0;
 }
 
 .feature h3 {
@@ -304,14 +304,60 @@ fill: white;
   content:"";
   background-color: #facd49;
   display: block;
-  height: 100%;
-  width: 100%;
+  height: 514px;
+  width: 1000%;
   position: absolute;
-  top: 0;
-  left: 0;
-
+  top: 121px;
+  left: -1000%;
 }
 
+footer {
+  padding-bottom: 2rem;
+}
+
+footer p {
+  color: #19182599;
+  font-size: 23px;
+  margin:  2rem 0 0;
+}
+
+footer .social ul{
+  display: flex;
+  gap: 1rem;
+}
+
+footer .social a {
+  background-color: background-color #5d50c6;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .social a svg {
+  fill: white;
+}
+
+footer .footer-links a, footer .footer-links li {
+font-family: Inter;
+font-size: 18px;
+color: #1918259f;
+text-decoration: none;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-links li {
+  padding: .5rem 0;
+}
+
+footer h3 {
+  font-weight: bold;
+  font-size: 23px;
+}
 
 @media screen and (min-width: 992px) {
   nav.navbar {
@@ -378,6 +424,13 @@ fill: white;
   .section-heading h2 {
     font-size: 40px;
   }
+  .travel .image {
+    height: 697px;
+    background-size: cover;
+}
+.travel .image::before {
+  display: none;
+}
 }
 @media screen and (max-width: 768px) {
   .section-heading h2 {
@@ -386,4 +439,8 @@ fill: white;
   .section-heading h3 {
     font-size: 16px;
   }
+  .travel .image {
+    height: 320px;
+  }
+
 }
