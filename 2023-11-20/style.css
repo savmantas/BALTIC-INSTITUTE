@@ -466,10 +466,6 @@ h5 {
   transition: 0.5s ease-in-out;
 }
 
-.middle p {
-  width: 570px;
-}
-
 .prepare h2 {
   margin: 0 10rem;
 }
@@ -512,6 +508,19 @@ z-index: -1000;
 .input-group {
   width: 757px;
   height: 96px;
+}
+
+.testimonials .arrows {
+  gap: 64rem;
+  margin-top: -1rem;
+}
+
+.testimonials .right:hover, .left:hover {
+  box-shadow: 0 0 25px 0 rgba(13, 13, 141, 0.991);
+}
+
+.smith {
+  margin-top: -3rem;
 }
 
 @media screen and (min-width: 992px) {
