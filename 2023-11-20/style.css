@@ -16,6 +16,13 @@
   font-weight: 800;
 }
 
+.bgimage {
+  top: 241.5rem;
+  opacity: .2;
+  z-index: -1000;
+  left: 1rem;
+}
+
 :root {
   --bs-border-radius: 3rem;
   --primary-color: #f85e9f;
@@ -56,6 +63,8 @@ nav.navbar li.active a {
 section.home {
   position: relative;
 }
+
+
 
 section.home::before {
   content: "";
@@ -304,10 +313,10 @@ section.home::before {
   content: "";
   background-color: #facd49;
   display: block;
-  height: 514px;
+  height: 565px;
   width: 1000%;
   position: absolute;
-  top: 121px;
+  top: 132px;
   left: -1000%;
 }
 
@@ -428,6 +437,53 @@ footer h3 {
   margin-top: 6rem;
 }
 
+.vr {
+  width: 128px;
+  height: 128px;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.dots {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(192, 192, 192, 0.422);
+  border-radius: 50px;
+}
+
+.dot {
+  gap: 10px;
+}
+
+.name {
+  color: #FF5722;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+.dots:hover {
+  background-color: #F85E9F;
+  transition: .5s ease-in-out;
+}
+
+.middle p {
+  width: 570px;
+}
+
+.prepare h2 {
+  margin: 0 10rem;
+}
+
+.purple {
+  margin-top: 13rem;
+  background-color:  rgba(252, 5, 252, 0.051);
+}
+
+.prepare {
+  margin-top: 5rem;
+}
 @media screen and (min-width: 992px) {
   nav.navbar {
     display: block;
@@ -510,5 +566,11 @@ footer h3 {
   }
   .travel .image {
     height: 320px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .travel .right {
+    width: 39%;
   }
 }
