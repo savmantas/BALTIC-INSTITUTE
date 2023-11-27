@@ -18,7 +18,7 @@
 
 .bgimage {
   top: 241.5rem;
-  opacity: .2;
+  opacity: 0.2;
   z-index: -1000;
   left: 1rem;
 }
@@ -63,8 +63,6 @@ nav.navbar li.active a {
 section.home {
   position: relative;
 }
-
-
 
 section.home::before {
   content: "";
@@ -322,7 +320,7 @@ section.home::before {
 
 footer {
   padding-bottom: 2rem;
-  padding-top: 50rem;
+  padding-top: 5rem;
 }
 
 footer p {
@@ -456,7 +454,7 @@ footer h3 {
 }
 
 .name {
-  color: #FF5722;
+  color: #ff5722;
 }
 
 h5 {
@@ -464,8 +462,8 @@ h5 {
 }
 
 .dots:hover {
-  background-color: #F85E9F;
-  transition: .5s ease-in-out;
+  background-color: #f85e9f;
+  transition: 0.5s ease-in-out;
 }
 
 .middle p {
@@ -477,13 +475,45 @@ h5 {
 }
 
 .purple {
-  margin-top: 13rem;
-  background-color:  rgba(252, 5, 252, 0.051);
+  margin-top: 8rem;
+  background-color: rgba(252, 5, 252, 0.051);
+  width: 1184px;
+  height: 608px;
+}
+
+.purple::before {
+  content: "";
+  display: block;
+  background: url(assets/images/orangedots.svg);
+  height: 176px;
+  width: 183px;
+  margin-left: -80px;
+  margin-top: -115px;
+}
+
+.vr::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(assets/images/stylee.png) no-repeat center center;
+  color: #5d50c6;
+  opacity: 0.3;
+  height: 958px;
+  width: 2506px;
+margin-left: -75rem;
+margin-top: -17.5rem;
+z-index: -1000;
 }
 
 .prepare {
   margin-top: 5rem;
 }
+
+.input-group {
+  width: 757px;
+  height: 96px;
+}
+
 @media screen and (min-width: 992px) {
   nav.navbar {
     display: block;
