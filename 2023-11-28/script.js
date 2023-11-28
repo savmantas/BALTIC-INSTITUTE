@@ -33,7 +33,7 @@ console.log(paskutinesRaides)
 
 
 let d = '2023-11-28';
-let m = d[5]+d[6];
+let m = d[1]+d[5];
 if(m === '01') console.log('January');
 else if (m === '02') console.log('February');
 else if (m === '03') console.log('March');
