@@ -23,3 +23,12 @@ let inicialai = aktoriausVardas[0] + " " + aktoriausPavarde[0];
 console.log(inicialai);
 
 
+let skaiciukasA = 5,
+  skaiciukasB = 15,
+  skaiciukasC = 25;
+
+if (skaiciukasA < skaiciukasC && skaiciukasA > skaiciukasB) console.log(skaiciukasA);
+else if (skaiciukasA > skaiciukasC && skaiciukasA < skaiciukasB) console.log(skaiciukasA);
+else if (skaiciukasB < skaiciukasA && skaiciukasB > skaiciukasC) console.log(skaiciukasB);
+else if (skaiciukasB > skaiciukasA && skaiciukasB < skaiciukasC) console.log(skaiciukasB);
+else console.log(skaiciukasC);
