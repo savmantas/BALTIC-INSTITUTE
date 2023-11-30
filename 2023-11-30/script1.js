@@ -8,13 +8,13 @@ let sk = rand(0, 99);
 if (sk >= 0 && sk <= 10) {
   let rez = sk ** 2;
   console.log(
-    `Skaicius papuola i 1 kategorija. Skaicius: ${sk},  pakeltas kvadraru: ${rez}.`
+    `Skaicius patenka i 1 kategorija. Skaicius: ${sk}.  pakeltas kvadratu: ${rez}.`
   );
 }
 
 // Antra kategorija. 11 - 19  - atspausdinti skaičių tokį koks jis yra.
 else if (sk >= 11 && sk <= 19) {
-  console.log(`Skaicius papuola i 2 kategorija. Skaicius: ${sk}.`);
+  console.log(`Skaicius patenka i 2 kategorija. Skaicius: ${sk}.`);
 }
 
 // Trecia kategorija. 20 - 49  ir skaičius yra lyginis: Skaičiaus dešimtis atimti iš paties skaičiaus ir atspausdinti.
@@ -22,7 +22,7 @@ else if (sk >= 20 && sk <= 49 && sk % 2 === 0) {
   let desimtys = +sk.toString()[0];
   let rez1 = sk - desimtys;
   console.log(
-    `Skaicius papuola i 3 kategorija. Skaicius: ${sk}.  Is skaiciaus atimtos desimtys: ${rez1}.`
+    `Skaicius patenka i 3 kategorija. Skaicius: ${sk}.  Is skaiciaus atimtos desimtys: ${rez1}.`
   );
 }
 
@@ -31,7 +31,7 @@ else if (sk >= 20 && sk <= 49 && sk % 2 !== 0) {
   let vienetai = sk % 10;
   let rez2 = (vienetai + sk) / 2;
   console.log(
-    `Skaicius papuola i 4 kategorija. Skaicius: ${sk}.  Skaiciaus vienetai prideti ir rezultatas padalintas is 2: ${rez2}.`
+    `Skaicius patenka i 4 kategorija. Skaicius: ${sk}.  Skaiciaus vienetai prideti ir rezultatas padalintas is 2: ${rez2}.`
   );
 }
 
@@ -47,6 +47,6 @@ else if (sk >= 50 && sk % 3 === 0) {
     String.fromCharCode(sk3) +
     String.fromCharCode(sk4);
   console.log(
-    `Skaicius papuola i 5 kategorija. Skaicius: ${sk}. Atsitiktinis stringas is 4 raidziu: ${string}.`
+    `Skaicius patenka i 5 kategorija. Skaicius: ${sk}. Atsitiktinis stringas is 4 raidziu: ${string}.`
   );
 } else console.log(`Skaicius nepatenka i jokia kategorija.`);
