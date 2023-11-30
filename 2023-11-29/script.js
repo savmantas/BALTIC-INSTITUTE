@@ -18,17 +18,12 @@ let raideA = rand(97, 120), raideB = rand(97, 120), raideC = rand(97, 120);
 console.log (String.fromCharCode(raideA," ", raideB," ", raideC));
 
 
-let aktoriausVardas = "Liam", aktoriausPavarde= "Neeson";
-let inicialai = aktoriausVardas[0] + " " + aktoriausPavarde[0];
-console.log(inicialai);
 
-
-let skaiciukasA = 5,
-  skaiciukasB = 15,
-  skaiciukasC = 25;
+let skaiciukasA = 10, skaiciukasB = 5, skaiciukasC = 25;
 
 if (skaiciukasA < skaiciukasC && skaiciukasA > skaiciukasB) console.log(skaiciukasA);
 else if (skaiciukasA > skaiciukasC && skaiciukasA < skaiciukasB) console.log(skaiciukasA);
 else if (skaiciukasB < skaiciukasA && skaiciukasB > skaiciukasC) console.log(skaiciukasB);
 else if (skaiciukasB > skaiciukasA && skaiciukasB < skaiciukasC) console.log(skaiciukasB);
 else console.log(skaiciukasC);
+
