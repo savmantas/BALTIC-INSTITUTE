@@ -24,7 +24,7 @@ if (sk >= 0 && sk <= 5) {
     `Sugeneruotas skaicius ${sk}. Ketvirta kategorija. 100 - sugeneruotas skaicius = ${rez}.`
   );
 }
-else if (sk === 46 || sk === 47 || sk === 56 || sk === 57 || sk === 66 || sk === 67|| sk === 76  || sk ===77 || sk ===86 || sk === 87 || sk === 96 || sk === 97) {
+else if (sk === 46 || sk === 47 || sk === 56 || sk === 57 || sk === 66 || sk === 67|| sk === 76  || sk === 77 || sk === 86 || sk === 87 || sk === 96 || sk === 97) {
 let rez = sk / 4;
 console.log(
     `Sugeneruotas skaicius ${sk}. Penkta kategorija. Sugeneruotas skaicius / 4 = ${rez}.`
