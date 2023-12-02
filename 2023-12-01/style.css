@@ -1,5 +1,5 @@
 html {
-    background-color: rgba(57, 57, 57, 0.231);
+    background-color: rgba(136, 65, 65, 0.45);
 }
 div {
   border: 5px solid rgba(0, 0, 0, 0.217);
@@ -7,7 +7,7 @@ div {
 
 
   width: 13rem;
-  height: 17.5rem;
+  height: 19rem;
   border-radius: 15px;
   margin: 5rem;
   width: 15rem;
@@ -32,6 +32,7 @@ input {
   background-color:rgba(255, 255, 255, 0);
   text-align: center;
   color: rgb(255, 255, 255);
+font-weight: 400;
 
 }
 
@@ -43,6 +44,7 @@ select {
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
   color: rgb(89, 220, 86);
+  font-weight: 800;
 
 
 }
@@ -53,7 +55,7 @@ button {
   margin-left: 103px;
   border-radius: 5px;
   background-color: rgba(115, 1, 1, 0);
-
+font-weight: 700;
 }
 
 button:hover {
@@ -65,5 +67,7 @@ select:hover {
 input:hover {
     background-color: rgba(107, 107, 107, 0.332);
 }
+
+
 
 
