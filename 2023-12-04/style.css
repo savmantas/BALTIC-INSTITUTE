@@ -1,14 +1,18 @@
 red {
-    color: red;
-margin: 11px;
-font-size: 30px;
+  color: red;
+  margin: 11px;
+  font-size: 30px;
 }
 black {
-    color: black;
-    margin: 11px;
-    font-size: 30px;
+  color: black;
+  margin: 11px;
+  font-size: 30px;
 }
 
 html {
-    background-color: rgba(129, 255, 255, 0.36);
+  background-color: rgba(129, 255, 255, 0.36);
+}
+
+body {
+  margin: 100px;
 }
