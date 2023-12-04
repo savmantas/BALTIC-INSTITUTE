@@ -12,6 +12,5 @@ function flipCoin() {
     skaicius++;
     document.getElementById("skaicius").textContent = skaicius;
     document.getElementById("moneta").value = "SKAIČIUS";
-   
   }
 }
