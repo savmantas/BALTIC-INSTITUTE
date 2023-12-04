@@ -1,0 +1,14 @@
+red {
+    color: red;
+margin: 11px;
+font-size: 30px;
+}
+black {
+    color: black;
+    margin: 11px;
+    font-size: 30px;
+}
+
+html {
+    background-color: rgba(129, 255, 255, 0.36);
+}
