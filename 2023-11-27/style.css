@@ -1,0 +1,29 @@
+
+nav.navbar a {
+    color: #6106a7fa;
+    text-decoration: none;
+    font-weight: 600;
+
+  }
+
+ p {
+    background-color: rgb(52, 1, 100);
+    color: white;
+ }
+
+ .learn {
+    color: white;
+ }
+
+ .btn {
+    border: 3px solid violet;
+ }
+
+ .btn:hover {
+    border-color: blue;
+ }
+
+.container-lg {
+ box-shadow: 0 3px 0px 0px;
+
+}

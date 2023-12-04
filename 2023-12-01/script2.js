@@ -21,5 +21,8 @@ function calc() {
   if (operacijos === "/" && skaicius2 === 0) {
     document.getElementById("rezultatas").value = "VEIKSMAS NEGALIMAS";
   }
+ if(isNaN(skaicius1) || isNaN(skaicius2)) {
+    document.getElementById("rezultatas").value = "NEĮVESTAS SKAIČIUS";
+}
 }
 

@@ -1,11 +1,9 @@
 html {
-    background-color: rgba(136, 65, 65, 0.45);
+  background-color: rgba(136, 65, 65, 0.45);
 }
 div {
   border: 5px solid rgba(0, 0, 0, 0.217);
   background-image: url(Dark-HI-Tech-Vector-Background.webp);
-
-
   width: 13rem;
   height: 19rem;
   border-radius: 15px;
@@ -15,29 +13,27 @@ div {
 }
 
 h1 {
-    text-decoration: underline;
-display: flex;
-justify-content: center;
-margin: 30px;
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: rgb(38, 159, 36);
   font-size: 22px;
 }
 
 input {
-    border: 2px solid rgba(255, 255, 255, 0.443);
+  border: 2px solid rgba(255, 255, 255, 0.443);
   margin: 10px;
   margin-left: 30px;
   border-radius: 5px;
-  background-color:rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   text-align: center;
   color: rgb(255, 255, 255);
-font-weight: 400;
-
+  font-weight: 400;
 }
-
 select {
-    border: 2px solid rgba(255, 255, 255, 0.443);
+  border: 2px solid rgba(255, 255, 255, 0.443);
   margin: 10px;
   margin-left: 98px;
   border-radius: 5px;
@@ -45,29 +41,21 @@ select {
   text-align: center;
   color: rgb(89, 220, 86);
   font-weight: 800;
-
-
 }
 button {
-
-    color:rgb(89, 220, 86);
+  color: rgb(89, 220, 86);
   margin: 10px;
   margin-left: 103px;
   border-radius: 5px;
   background-color: rgba(115, 1, 1, 0);
-font-weight: 700;
+  font-weight: 700;
 }
-
 button:hover {
-    background-color: rgba(107, 107, 107, 0.545);
+  background-color: rgba(107, 107, 107, 0.545);
 }
 select:hover {
-    background-color: rgb(107, 107, 107);
+  background-color: rgb(107, 107, 107);
 }
 input:hover {
-    background-color: rgba(107, 107, 107, 0.332);
+  background-color: rgba(107, 107, 107, 0.332);
 }
-
-
-
-
