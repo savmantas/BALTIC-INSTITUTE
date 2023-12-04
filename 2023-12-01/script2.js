@@ -22,7 +22,7 @@ function calc() {
     document.getElementById("rezultatas").value = "VEIKSMAS NEGALIMAS";
   }
  if(isNaN(skaicius1) || isNaN(skaicius2)) {
-    document.getElementById("rezultatas").value = "NEĮVESTAS SKAIČIUS";
+    document.getElementById("rezultatas").value = "NEĮVESTAS SKAIČIUS!";
 }
 }
 
