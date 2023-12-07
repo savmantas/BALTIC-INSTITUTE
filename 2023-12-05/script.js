@@ -8,7 +8,7 @@ for (let index = 0; index < 20; index++) {
   arr1.push(index);
 }
 console.log(
-  "--------------------------------- Pirma uzduotis. --------------------"
+  "Pirma uzduotis. Sukurkite masyvą iš 20 elementų. a :Kurių reikšmės: 0, 1, 2 …, 18 ,19; b: Kurių reikšmės: 1,2 3, … ,19, 20; c: Kurių reikšmės: 19, 18 … 2, 1, 0; d: Kurių reikšmės: 20, 21, 22…. 38, 39; e: Kurių reikšmės: 49, 48, 47…. 31, 30; f: Su atsitiktinėmis reikšmėmis nuo 0 iki 10."
 );
 console.log("a:");
 
@@ -58,7 +58,7 @@ for (let index = 0; index < 20; index++) {
 console.log(arr6);
 
 console.log(
-  "-------------------------------- Antra uzduotis. ------------------------"
+  "Antra uzduotis. Pasinaudokite join funkcija ir atspausdinkite vieno iš ankščiau sukurtų masyvų reikšmes tokia tvarka (pvz masyvas a) 0 -> 1 -> 2…. -> 18 -> 19."
 );
 
 let arr7 = [];
@@ -70,7 +70,7 @@ for (let index = 0; index < 10; index++) {
 console.log(arr7.join(" -> "));
 
 console.log(
-  "------------------------------- Trecia uzduotis. -------------------------"
+  "Trecia uzduotis. iš f masyvo ištrinkite elementus kurie: a: Yra lyginiai; b: Nelyginiai; c: Dalinasi iš 3; d: Yra lygūs savo indeksui; e: Yra mažesni nei 5 arba didesni nei 8; f: Yra  nuo 2 iki 5; g: kurių suma su sekančiu elementu masyve yra dviženklė (jei reikšmė paskutinė masyve, sekančiu elementu laikykite pirmąjį masyvo elementą) h: kurių suma su sekančiu elementu masyve yra lyginė"
 );
 
 console.log("a:  f masyvas pasalinus lyginius skaicius:");
@@ -202,16 +202,44 @@ for (let index = 0; index < arr6.length; index++) {
 console.log(arr6);
 
 console.log(
-  "------------------------------- Ketvirta uzduotis. -------------------------"
+  "Ketvirta uzduotis. Sukurkite atsitiktinio stringo iš 15 lotyniškų mažųjų raidžių generavimo algoritmą. Pasinaudokite String.fromCharCode(skaicius) funkcija, kad sugeneruoti atsitiktinę raidę."
+);
+function generuotiStringa() {
+  let stringas = "";
+  for (let i = 0; i < 15; i++) {
+    let raide = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    stringas += raide;
+  }
+  return stringas;
+}
+let stringas = generuotiStringa();
+console.log(
+  "                   Sugeneruotas atsitiktinis stringas: " + stringas
 );
 
-function generuotiAtsitiktiniStringa() {
+console.log(
+  "Penkta uzduotis. Sukurti masyvą iš 100 atsitiktinių skaičių. Prieš pridėdami elementą prie masyvo patikrinkite  ar skaičius yra nuo 40 iki 60. Jei taip, jo nepridėkite prie masyvo. Galiausiai masyvas turi turėti 100 elementų."
+);
 
-  var atsitiktinisStringas = rand(97, 120);
-
-  for (var i = 0; i < 15; i++) 
+function generuotiSkaicius() {
+  let skaiciai = [];
+  while (skaiciai.length < 100) {
+    let skaicius = Math.floor(Math.random() * 100) + 1;
+    if (skaicius < 40 || skaicius > 60) {
+      skaiciai.push(skaicius);
+    }
+    if (skaicius % 2 === 0) {
+      document.write(`<green>${skaicius}</green>`);
+    } else {
+      document.write(`<red>${skaicius}</red>`);
+    }
+    document.write(" ");
+  }
+  console.log(skaiciai);
 }
+const skaiciai = generuotiSkaicius();
+console.log(skaiciai);
 
-
-var atsitiktinisStringas = generuotiAtsitiktiniStringa();
-console.log(atsitiktinisStringas);
+console.log(
+  "Sesta uzduotis.  Pasinaudojant document.write() funkcija išveskite lyginius 5 uždavinio masyvo skaičius su spalva - žalia, o nelyginius su spalva - raudona;"
+);
