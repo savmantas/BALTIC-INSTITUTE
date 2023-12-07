@@ -200,3 +200,18 @@ for (let index = 0; index < arr6.length; index++) {
   }
 }
 console.log(arr6);
+
+console.log(
+  "------------------------------- Ketvirta uzduotis. -------------------------"
+);
+
+function generuotiAtsitiktiniStringa() {
+
+  var atsitiktinisStringas = rand(97, 120);
+
+  for (var i = 0; i < 15; i++) 
+}
+
+
+var atsitiktinisStringas = generuotiAtsitiktiniStringa();
+console.log(atsitiktinisStringas);

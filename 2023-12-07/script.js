@@ -1,17 +1,17 @@
-function rand(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+let word = document.querySelector(".inputText");
+let btn = document.querySelector(".btn");
+let result = document.querySelector(".result");
 
-  function generateArrayOfRandomNumbers(min = 10, max, length = 10) {
-    let arr =[];
-    for (let i = 0; i < length; i++){
-        arr.push(rand(min, max));
+btn.addEventListener("click", countVowel);
+function countVowel() {
+  let vowelCount = 0;
+  let wordValue = word.value;
+
+  for (let i = 0; i < wordValue.length; i++) {
+    let letter = wordValue[i];
+    if (letter.match(/([a,e,o,u,i])/)) {
+      vowelCount++;
     }
-return arr;
-
   }
-
-
-
-  const arr = generateArrayOfRandomNumbers(1, 99, 20);
-  console.log(arr);
+  result.innerHTML = `${word.value.toUpperCase()} has ${vowelCount} vowels`;
+}
