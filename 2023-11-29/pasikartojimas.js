@@ -80,8 +80,7 @@ console.log(`Nuliu - ${nuliai}, Vienetu - ${vienetai}, Dvejetu - ${dvejetai}.`);
 let n1 = rand(0, 4),
   n2 = rand(0, 4);
 rez = 0;
-
-
+console.log(`${n1}, ${n2}`)
 if (n1 > n2) {
   rez = n1 / n2;
 } else if (n1 < n2) {
@@ -91,9 +90,32 @@ if (n1 > n2) {
 if (n1 === n2) {
   rez = console.log("Kintamieji yra lygus.");
 }
-if (n2 === 0) {
+else if (n2 === 0) {
   rez = console.log("Dalyba is nulio negalima!");
 } else if (n1 === 0) {
   rez = console.log("Dalyba is nulio negalima!");
 }
-console.log(rez.toFixed(2));
+else console.log(rez.toFixed(2));
+
+let skaic1 = rand(0, 25),
+  skaic2 = rand(0, 25),
+  skaic3 = rand(0, 25);
+let klaida = 'Kazkurie skaiciai vienodi.'
+console.log(`${skaic1}, ${skaic2}, ${skaic3}`);
+
+if (
+  (skaic1 < skaic2 && skaic1 > skaic3) ||
+  (skaic1 < skaic3 && skaic1 > skaic2)
+) {
+  console.log(skaic1);
+}  else if (
+  (skaic2 < skaic1 && skaic2 > skaic3) ||
+  (skaic2 < skaic3 && skaic2 > skaic1)
+) {
+  console.log(skaic2);
+}  else if (
+  (skaic3 < skaic2 && skaic3 > skaic1) ||
+  (skaic3 < skaic1 && skaic3 > skaic2)
+) {
+  console.log(skaic3);
+}  else console.log(klaida)
