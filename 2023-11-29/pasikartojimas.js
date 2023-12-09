@@ -80,7 +80,7 @@ console.log(`Nuliu - ${nuliai}, Vienetu - ${vienetai}, Dvejetu - ${dvejetai}.`);
 let n1 = rand(0, 4),
   n2 = rand(0, 4);
 rez = 0;
-console.log(`${n1}, ${n2}`)
+console.log(`${n1}, ${n2}`);
 if (n1 > n2) {
   rez = n1 / n2;
 } else if (n1 < n2) {
@@ -89,18 +89,16 @@ if (n1 > n2) {
 
 if (n1 === n2) {
   rez = console.log("Kintamieji yra lygus.");
-}
-else if (n2 === 0) {
+} else if (n2 === 0) {
   rez = console.log("Dalyba is nulio negalima!");
 } else if (n1 === 0) {
   rez = console.log("Dalyba is nulio negalima!");
-}
-else console.log(rez.toFixed(2));
+} else console.log(rez.toFixed(2));
 
 let skaic1 = rand(0, 25),
   skaic2 = rand(0, 25),
   skaic3 = rand(0, 25);
-let klaida = 'Kazkurie skaiciai vienodi.'
+let klaida = "Kazkurie skaiciai vienodi.";
 console.log(`${skaic1}, ${skaic2}, ${skaic3}`);
 
 if (
@@ -108,14 +106,34 @@ if (
   (skaic1 < skaic3 && skaic1 > skaic2)
 ) {
   console.log(skaic1);
-}  else if (
+} else if (
   (skaic2 < skaic1 && skaic2 > skaic3) ||
   (skaic2 < skaic3 && skaic2 > skaic1)
 ) {
   console.log(skaic2);
-}  else if (
+} else if (
   (skaic3 < skaic2 && skaic3 > skaic1) ||
   (skaic3 < skaic1 && skaic3 > skaic2)
 ) {
   console.log(skaic3);
-}  else console.log(klaida)
+} else console.log(klaida);
+
+let raide1 = rand(97, 120),
+  raide2 = rand(97, 120),
+  raide3 = rand(97, 120);
+console.log(String.fromCharCode`${raide1}, ${raide2}, ${raide3}`);
+
+let pastraipa =
+  "The planet {{planet}} is the third planet from the {{star}}. {{planet}} is the only astronomical object known to harbor life. According to radiometric dating and other sources of evidence, {{planet}} formed over {{age}} ago. {{planet}}*s gravity interacts with other objects in space, especially the {{star}} and the {{satellite}}, {{planet}}*s only natural satellite.";
+console.log(pastraipa);
+let zodis = "Earth",
+  zodis1 = "Sun",
+  zodis2 = "4.54 billion years",
+  zodis3 = "Moon";
+zodis4 = "'";
+let pakeistaPastraipa = pastraipa.replaceAll("{{planet}}", zodis);
+let pakeistaPastraipa1 = pakeistaPastraipa.replaceAll("{{star}}", zodis1);
+let pakeistaPastraipa2 = pakeistaPastraipa1.replaceAll("{{age}}", zodis2);
+let pakeistaPastraipa3 = pakeistaPastraipa2.replaceAll("{{satellite}}", zodis3);
+let pakeistaPastraipa4 = pakeistaPastraipa3.replaceAll("*", zodis4);
+console.log(pakeistaPastraipa4);
