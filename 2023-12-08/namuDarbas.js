@@ -12,10 +12,10 @@ let countA = masyvas.filter((raide) => raide === "A").length,
   countC = masyvas.filter((raide) => raide === "C").length,
   countD = masyvas.filter((raide) => raide === "D").length;
 
-console.log("A raidės count: " + countA);
-console.log("B raidės count: " + countB);
-console.log("C raidės count: " + countC);
-console.log("D raidės count: " + countD);
+console.log("A raides count: " + countA);
+console.log("B raides count: " + countB);
+console.log("C raides count: " + countC);
+console.log("D raides count: " + countD);
 
 masyvas.sort(function(a, b) {
 
