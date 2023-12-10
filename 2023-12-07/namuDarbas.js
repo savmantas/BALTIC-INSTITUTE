@@ -25,8 +25,9 @@ let atsitiktinisSkaicius = rand(1, 6);
 document.write(
   `<h3>Skaicius ${atsitiktinisSkaicius}. Rezultatas: < h3 > ${atsitiktinisSkaicius} < /h3 > </h3>`
 );
-
+//--------------------------------skaiciu spalvos??????-------------------------------------
 let skaicius = [rand(-10, 10), rand(-10, 10), rand(-10, 10)];
+
 function nustatytiSpalva(skaicius) {
   if (skaicius < 0) {
     return "green";
@@ -38,3 +39,4 @@ function nustatytiSpalva(skaicius) {
 }
 }
 document.write(skaicius);
+

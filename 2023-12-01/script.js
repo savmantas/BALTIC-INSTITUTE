@@ -13,7 +13,7 @@ function guessNumber() {
 
   if (spejimuSkaicius === 0) {
     resultParagraph.innerText = `Spėjimų skaičius baigėsi, bandykite dar kartą perkrovę puslapį`;
-    return;
+   
   }
 
   spejimuSkaicius--;
