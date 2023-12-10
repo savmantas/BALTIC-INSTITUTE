@@ -178,3 +178,90 @@ function login() {
   } else errors.length > 0;
   return "Prisijungimas nepavyko.";
 }
+
+
+
+
+
+function calculateDistanceAndSituation(s0, v1, v2, t) {
+
+  let s = s0 + t * (v1 - v2);
+
+
+  let situation;
+  if (s < 0) {
+    situation = "Pasivijo";
+  } else if (s === 0) {
+    situation = "Pavys";
+  } else if (v1 * t < s && v2 * t < s) {
+    situation = "Niekada nepavys";
+  } else {
+    situation = "Aplenkė";
+  }
+
+  return { s, situation };
+}
+
+let s0 = 200;
+let v1 = 80;
+let v2 = 50;
+let t = 2;
+
+let res = calculateDistanceAndSituation(s0, v1, v2, t);
+
+console.log(`Atstumas: ${res.s} km. Situacija: ${res.situation}`);
+
+function analizeTemperatures(t1, t2, t3) {
+  let positiveCount = 0;
+  let negativeCount = 0;
+
+
+  if (t1 >= 0) {
+    positiveCount++;
+  } else {
+    negativeCount++;
+  }
+
+
+  if (t2 >= 0) {
+    positiveCount++;
+  } else {
+    negativeCount++;
+  }
+
+
+  if (t3 >= 0) {
+    positiveCount++;
+  } else {
+    negativeCount++;
+  }
+
+
+  let resultMessage =
+    "Rezultatas: " +
+    (positiveCount > 0 ? `Dvi dienos teigiama, ` : "") +
+    (negativeCount > 0 ? `vieną - neigiama.` : "");
+
+  return resultMessage;
+}
+
+
+let t1 = 2;
+let t2 = -5;
+let t3 = 8;
+
+let result = analizeTemperatures(t1, t2, t3);
+console.log(result);
+
+
+
+let a = 5;
+let b = 20;
+
+console.log(`Pradinės reikšmės: a = ${a}, b = ${b}`);
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log(`Galutinės reikšmės: a = ${a}, b = ${b}`);

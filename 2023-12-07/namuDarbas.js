@@ -29,11 +29,12 @@ document.write(
 let skaicius = [rand(-10, 10), rand(-10, 10), rand(-10, 10)];
 function nustatytiSpalva(skaicius) {
   if (skaicius < 0) {
-    return "green"; // žalia
+    return "green";
   } else if (skaicius === 0) {
-    return "red"; // raudona
+    return "red";
   } else {
-    return "blue"; // mėlyna
-  }
+    return "blue";
+
+}
 }
 document.write(skaicius);
