@@ -118,10 +118,10 @@ if (
   console.log(skaic3);
 } else console.log(klaida);
 
-let raide1 = rand(97, 120),
-  raide2 = rand(97, 120),
-  raide3 = rand(97, 120);
-console.log(String.fromCharCode`${raide1}, ${raide2}, ${raide3}`);
+let raide1 = rand(97, 122),
+  raide2 = rand(97, 122),
+  raide3 = rand(97, 122);
+console.log(String.fromCharCode`${raide1} ${raide2} ${raide3}`);
 
 let pastraipa =
   "The planet {{planet}} is the third planet from the {{star}}. {{planet}} is the only astronomical object known to harbor life. According to radiometric dating and other sources of evidence, {{planet}} formed over {{age}} ago. {{planet}}*s gravity interacts with other objects in space, especially the {{star}} and the {{satellite}}, {{planet}}*s only natural satellite.";
@@ -129,8 +129,8 @@ console.log(pastraipa);
 let zodis = "Earth",
   zodis1 = "Sun",
   zodis2 = "4.54 billion years",
-  zodis3 = "Moon";
-zodis4 = "'";
+  zodis3 = "Moon",
+  zodis4 = "'";
 let pakeistaPastraipa = pastraipa.replaceAll("{{planet}}", zodis);
 let pakeistaPastraipa1 = pakeistaPastraipa.replaceAll("{{star}}", zodis1);
 let pakeistaPastraipa2 = pakeistaPastraipa1.replaceAll("{{age}}", zodis2);

@@ -23,13 +23,48 @@ if (sk >= 0 && sk <= 5) {
   console.log(
     `Sugeneruotas skaicius ${sk}. Ketvirta kategorija. 100 - sugeneruotas skaicius = ${rez}.`
   );
-}
-else if (sk === 46 || sk === 47 || sk === 56 || sk === 57 || sk === 66 || sk === 67|| sk === 76  || sk === 77 || sk === 86 || sk === 87 || sk === 96 || sk === 97) {
-let rez = sk / 4;
-console.log(
+} else if (
+  sk === 46 ||
+  sk === 47 ||
+  sk === 56 ||
+  sk === 57 ||
+  sk === 66 ||
+  sk === 67 ||
+  sk === 76 ||
+  sk === 77 ||
+  sk === 86 ||
+  sk === 87 ||
+  sk === 96 ||
+  sk === 97
+) {
+  let rez = sk / 4;
+  console.log(
     `Sugeneruotas skaicius ${sk}. Penkta kategorija. Sugeneruotas skaicius / 4 = ${rez}.`
   );
+} else {
+  console.log(`Sugeneruotas skaicius nepatenka i kategorijas!`);
 }
-else {
-    console.log(`Sugeneruotas skaicius nepatenka i kategorijas!`)
+
+// function pakeistiElementoTeksta() {
+// let vardoIvestis = document.querySelector("#vardas");
+//let paragrafas = document.querySelector('.isskirtinis-paragrafas')
+//let vardoIvestiesReiksme = vardoIvestis.value
+//paragrafas.innerText = `Sveiki prisijunge prie puslapio, ${vardoIvestiesReiksme}`
+let loginName = "Mantas";
+let password = "123321";
+
+function login() {
+  let prisijungimoVardoIvestis = document.querySelector("#prisijungimoVardas");
+  let prisijungimoSlaptazodzioIvestis = document.querySelector(
+    "#prisijungimoSlaptazodis"
+  );
+ let  prisijungimoVardas = prisijungimoVardoIvestis.value
+ let prisijungimoSlaptazodis = prisijungimoSlaptazodzioIvestis.value
+ if (loginName === prisijungimoVardas && password === prisijungimoSlaptazodis)
+ {
+document.write('Prisijungete sekmingai.')
+ }
+ else{
+document.write('Prisijungimo duomenys yra blogi.')
+ }
 }
