@@ -137,3 +137,44 @@ let pakeistaPastraipa2 = pakeistaPastraipa1.replaceAll("{{age}}", zodis2);
 let pakeistaPastraipa3 = pakeistaPastraipa2.replaceAll("{{satellite}}", zodis3);
 let pakeistaPastraipa4 = pakeistaPastraipa3.replaceAll("*", zodis4);
 console.log(pakeistaPastraipa4);
+
+let password = "Slaptazodis1.";
+
+function login() {
+  let prisijungimoSlaptazodzioIvestis = document.querySelector(
+    "#prisijungimoSlaptazodis"
+  );
+  let prisijungimoSlaptazodis = prisijungimoSlaptazodzioIvestis.value;
+
+  let errors = [];
+
+  if (password.length < 8 || password.length > 28) {
+    errors.push("Slaptažodis turi būti nuo 8 iki 28 simbolių ilgio.");
+  } else if (/[A-Z]/.test(password)) {
+    errors.push("Slaptažodyje turi būti bent viena didžioji raidė.");
+  }
+
+  if (/[a-z]/.test(password)) {
+    errors.push("Slaptažodyje turi būti bent viena mažoji raidė.");
+  }
+
+  if (/[0-9]/.test(password)) {
+    errors.push("Slaptažodyje turi būti bent vienas skaičius.");
+  }
+
+  if (/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/.test(password)) {
+    errors.push("Slaptažodyje turi būti bent vienas specialusis simbolis.");
+  }
+
+  if (password === prisijungimoSlaptazodis) {
+    errors.push("Prisijungimas sėkmingas.");
+  }
+
+  let klaiduZinute = document.querySelector("#klaiduZinute");
+  klaiduZinute.innerHTML = errors.join("<br>");
+
+  if (errors.length === 0) {
+    return "Prisijungimas sėkmingas.";
+  } else errors.length > 0;
+  return "Prisijungimas nepavyko.";
+}
