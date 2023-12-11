@@ -1,45 +1,80 @@
-let masyvas = new Array(200);
-for (let i = 0; i < masyvas.length; i++) {
-  let atsitiktineRaide = String.fromCharCode(
-    65 + Math.floor(Math.random() * 4)
-  );
-  masyvas[i] = atsitiktineRaide;
+function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let countA = masyvas.filter((raide) => raide === "A").length,
-  countB = masyvas.filter((raide) => raide === "B").length,
-  countC = masyvas.filter((raide) => raide === "C").length,
-  countD = masyvas.filter((raide) => raide === "D").length;
+const generateArrayOfString = (length) => {
+  const arr = [];
+  for (let i = 0; i < length; i++) {
+    let atsitiktineRaide = String.fromCharCode(rand(65, 68));
+    arr.push(atsitiktineRaide);
+  }
+  return arr;
+};
 
-console.log("A raides count: " + countA);
-console.log("B raides count: " + countB);
-console.log("C raides count: " + countC);
-console.log("D raides count: " + countD);
+const charactersArray = generateArrayOfString(200);
+console.log(charactersArray);
 
-masyvas.sort(function (a, b) {
-  return a.localeCompare(b);
-});
+charactersArray.sort();
+console.log(charactersArray);
 
-console.log("Masyvas pagal abecele:", masyvas);
+const arr1 = generateArrayOfString(200),
+  arr2 = generateArrayOfString(200),
+  arr3 = generateArrayOfString(200);
+(sumArray = []), (uniqueValues = []);
+superUniqueValues = [];
 
-function generuotiUnikaliusSkaicius(min, max, naudoti) {
-  let skaicius;
-  do {
-    skaicius = Math.floor(Math.random() * (max - min + 1)) + min;
-  } while (naudoti.includes(skaicius));
-  return skaicius;
+for (let index in arr1) {
+  sumArray[index] = arr1[index] + arr2[index] + arr3[index];
 }
 
-let masyvas1 = [],
-  masyvas2 = [];
+console.log(sumArray);
 
-for (let i = 0; i < 100; i++) {
-  let unikalusSkaiciusMasyvo1 = generuotiUnikaliusSkaicius(100, 999, masyvas1);
-  let unikalusSkaiciusMasyvo2 = generuotiUnikaliusSkaicius(100, 999, masyvas2);
-
-  masyvas1.push(unikalusSkaiciusMasyvo1);
-  masyvas2.push(unikalusSkaiciusMasyvo2);
+for (const value of sumArray) {
+  if (!uniqueValues.includes(value)) {
+    uniqueValues.push(value);
+  }
 }
 
-console.log("Masyvas 1:", masyvas1);
-console.log("Masyvas 2:", masyvas2);
+console.log(uniqueValues);
+
+let superUniqueCombinations = 0;
+for (let value of sumArray) {
+  let countOfThisCombination = 0;
+  for (let value2 of sumArray) if (value === value2) countOfThisCombination++;
+
+  if (countOfThisCombination === 1) {
+    superUniqueCombinations++;
+    superUniqueValues.push(value);
+  }
+}
+console.log(superUniqueValues.join(", "));
+console.log("Is viso unikaliu reiksmiu:" + superUniqueValues.length);
+
+function generateUniqueArray(length, min, max) {
+  const arr = [];
+  while (arr.length < length) {
+    let randomNumber = rand(min, max);
+    if (!arr.includes(randomNumber)) arr.push(randomNumber);
+  }
+  return arr;
+}
+
+const array1 = generateUniqueArray(100, 100, 999),
+  array2 = generateUniqueArray(100, 100, 999);
+
+console.log(`Masyvas 1:`);
+console.log(array1);
+console.log(`Masyvas 2:`);
+console.log(array2);
+
+const fifhArray = [];
+
+for (let index in arr1) {
+  if (arr1[index] !== arr2[index]) {
+    fifhArray.push(arr1[index]);
+  }
+}
+
+console.log(fifhArray);
+
+
