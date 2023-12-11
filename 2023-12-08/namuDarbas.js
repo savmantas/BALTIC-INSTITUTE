@@ -92,3 +92,28 @@ for (let index of array1) {
   i++;
 }
 console.log(newArray2);
+
+const generateRandomNumber = (length, min, max) => {
+  const arr = [];
+  for (let i = 0; i < length; i++);
+  arr.push(rand(min, max));
+  return arr;
+};
+
+const generateString = (length) => {
+  let str = "";
+  for (let i = 0; i < length; i++) {
+    str += String.fromCharCode(rand(65, 90));
+  }
+  return str;
+};
+const stringArray = [];
+for (let i = 0; i < 100; i++) {
+  stringArray.push(generateString(4));
+}
+
+console.log(stringArray);
+stringArray.sort();
+console.log(stringArray);
+stringArray.sort().reverse();
+console.log(stringArray);
