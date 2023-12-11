@@ -93,7 +93,7 @@ for (let index of array1) {
 }
 console.log(newArray2);
 
-const generateRandomNumber = (length, min, max) => {
+const generateRandomNumbersArray = (length, min, max) => {
   const arr = [];
   for (let i = 0; i < length; i++);
   arr.push(rand(min, max));
@@ -117,3 +117,4 @@ stringArray.sort();
 console.log(stringArray);
 stringArray.sort().reverse();
 console.log(stringArray);
+
