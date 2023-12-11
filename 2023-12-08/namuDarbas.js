@@ -77,4 +77,18 @@ for (let index in arr1) {
 
 console.log(fifhArray);
 
+const newArray = [];
+for (let value of array1) {
+  if (array2.includes(value)) {
+    newArray.push(value);
+  }
+}
+console.log(newArray);
 
+const newArray2 = [];
+let i = 0;
+for (let index of array1) {
+  newArray2[index] = array2[i];
+  i++;
+}
+console.log(newArray2);
