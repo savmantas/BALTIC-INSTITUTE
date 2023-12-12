@@ -1,75 +1,4 @@
-const people = [
-  {
-    number: 1,
-    firstName: "John",
-    lastName: "Doe",
-    age: 28,
-    nationality: "British",
-  },
-  {
-    number: 2,
-    firstName: "Maria",
-    lastName: "Gonzalez",
-    age: 34,
-    nationality: "Spanish",
-  },
-  {
-    number: 3,
-    firstName: "Amit",
-    lastName: "Patel",
-    age: 42,
-    nationality: "Indian",
-  },
-  {
-    number: 4,
-    firstName: "Yasmin",
-    lastName: "Al-Hariri",
-    age: 26,
-    nationality: "Lebanese",
-  },
-  {
-    number: 5,
-    firstName: "Chen",
-    lastName: "Wang",
-    age: 30,
-    nationality: "Chinese",
-  },
-  {
-    number: 6,
-    firstName: "Adeola",
-    lastName: "Oluwaseun",
-    age: 36,
-    nationality: "Nigerian",
-  },
-  {
-    number: 7,
-    firstName: "Irina",
-    lastName: "Smirnov",
-    age: 29,
-    nationality: "Russian",
-  },
-  {
-    number: 8,
-    firstName: "Carlos",
-    lastName: "Santos",
-    age: 40,
-    nationality: "Brazilian",
-  },
-  {
-    number: 9,
-    firstName: "Sarah",
-    lastName: "Taylor",
-    age: 31,
-    nationality: "Canadian",
-  },
-  {
-    number: 10,
-    firstName: "Hiroshi",
-    lastName: "Takahashi",
-    age: 38,
-    nationality: "Japanese",
-  }
-];
+const people = [];
 let currentNumeration = 1;
 
 const buttonElement = document.querySelector("#add-button");
@@ -89,7 +18,18 @@ buttonElement.addEventListener("click", () => {
 
   generateTableContent(people);
 });
+removeButton.addEventListener("click", () => {
+    const removeNumber = parseInt(document.getElementById("removeNumberInput").value);
 
+    const indexToRemove = people.findIndex(person => person.number === removeNumber);
+
+    if (indexToRemove !== -1) {
+      people.splice(indexToRemove, 1);
+      generateTableContent(people);
+    } else {
+      alert('Person with the specified number does not exist.');
+    }
+  });
 function generateTableContent(people) {
   let dynamicHTML = ``;
 
