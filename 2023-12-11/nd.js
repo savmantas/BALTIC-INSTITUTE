@@ -58,3 +58,6 @@ function rand(min, max) {
   }
   console.log(`minimali masyvo reiksme: ${min}`);
   console.log(`maksimali masyvo reiksme: ${max}`);
+
+
+  
