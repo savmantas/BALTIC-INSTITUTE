@@ -15,10 +15,16 @@ td {
   margin-right: 1rem;
 }
 form div {
-  width: 50%;
+  width: 30%;
 }
 div label {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+}
+h1{
+  color: rgb(20, 37, 121);
+}
+body {
+  background-color: antiquewhite;
 }
