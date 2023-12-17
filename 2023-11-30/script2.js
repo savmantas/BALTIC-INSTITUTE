@@ -1,4 +1,4 @@
-function rand(min, max) {
+/*function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function categoryOneCalculation(skaicius) {
@@ -59,29 +59,57 @@ if (sk >= 0 && sk <= 5) {
   );
 } else {
   console.log(`Sugeneruotas skaicius nepatenka i kategorijas!`);
-}
-
-// function pakeistiElementoTeksta() {
-// let vardoIvestis = document.querySelector("#vardas");
-//let paragrafas = document.querySelector('.isskirtinis-paragrafas')
-//let vardoIvestiesReiksme = vardoIvestis.value
-//paragrafas.innerText = `Sveiki prisijunge prie puslapio, ${vardoIvestiesReiksme}`
+}*/
 let loginName = "Mantas";
-let password = "123321";
+let password = "Savmantas1.";
 
 function login() {
   let prisijungimoVardoIvestis = document.querySelector("#prisijungimoVardas");
   let prisijungimoSlaptazodzioIvestis = document.querySelector(
     "#prisijungimoSlaptazodis"
   );
+  let klaiduZinutesDiv = document.querySelector("#klaiduZinutes");
+  let sekmingasPrisijungimasDiv = document.querySelector("#sekmingasPrisijungimas");
+
   let prisijungimoVardas = prisijungimoVardoIvestis.value;
   let prisijungimoSlaptazodis = prisijungimoSlaptazodzioIvestis.value;
+
+  let klaidos = [];
+
   if (
-    loginName === prisijungimoVardas &&
-    password === prisijungimoSlaptazodis
+    loginName !== prisijungimoVardas ||
+    password !== prisijungimoSlaptazodis
   ) {
-    document.write("Prisijungete sekmingai.");
+    klaidos.push("Neteisingas prisijungimo vardas arba slaptažodis.");
+  }
+
+  if (!/[0-9]/.test(prisijungimoSlaptazodzioIvestis.value)) {
+    klaidos.push("Slaptažodyje turi būti bent vienas skaičius!");
+  }
+  if (prisijungimoSlaptazodis.length < 8 || prisijungimoSlaptazodis.length > 28 ) {
+    klaidos.push("Slaptažodis turi buti ne trumpesnis nei 8 simboliai ir ne ilgesnis nei 28 simboliai!");
+  }
+
+  if (!/[A-Z]/.test(prisijungimoSlaptazodzioIvestis.value)) {
+    klaidos.push("Slaptažodyje turi būti bent viena didžioji raidė!");
+  }
+
+  if (!/[a-z]/.test(prisijungimoSlaptazodzioIvestis.value)) {
+    klaidos.push("Slaptažodyje turi būti bent viena mažoji raidė!");
+  }
+
+  if (
+    !/[$&+,:;=?@#|'<>.-^*()%!"]/.test(prisijungimoSlaptazodzioIvestis.value)
+  ) {
+    klaidos.push("Slaptažodyje turi būti bent vienas specialus simbolis!");
+  }
+
+  if (klaidos.length > 0) {
+    klaiduZinutesDiv.innerHTML = "<p>" + klaidos.join("</p><p>") + "</p>";
+    sekmingasPrisijungimasDiv.innerHTML = '';
   } else {
-    document.write("Prisijungimo duomenys yra blogi.");
+    klaiduZinutesDiv.innerHTML = "";
+    sekmingasPrisijungimasDiv.innerHTML = "<p>Prisijungėte sėkmingai.</p>";
+
   }
 }
