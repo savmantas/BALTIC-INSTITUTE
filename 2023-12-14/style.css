@@ -1,0 +1,12 @@
+.filter {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.281)
+}
+.update {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.281);
+    border-top: 3px solid rgba(0, 0, 0, 0.281)
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
