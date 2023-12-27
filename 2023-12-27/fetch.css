@@ -12,10 +12,15 @@ img {
 justify-content: center;
 text-align: center;
 }
-.selectBreed {
+#breeds {
 margin-top: 1rem;
 
   text-align: center;
   width: 14rem;
   font-size: 1.5rem;
+}
+#selected {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  font-weight: 700;
 }

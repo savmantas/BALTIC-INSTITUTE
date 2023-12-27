@@ -13,15 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
       image();
     });
   window.image = function () {
-    const selectedBreed = document.getElementById("breeds").value;
+    const Breed = document.getElementById("breeds").value;
     const dogImage = document.getElementById("dogImage");
-    fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`)
+    fetch(`https://dog.ceo/api/breed/${Breed}/images/random`)
       .then((atsakymas) => atsakymas.json())
       .then((info) => {
         const img = document.createElement("img");
         img.src = info.message;
         dogImage.innerHTML = "";
         dogImage.appendChild(img);
+        selected.textContent = `${Breed.toUpperCase()}`;
+
       });
   };
 });
