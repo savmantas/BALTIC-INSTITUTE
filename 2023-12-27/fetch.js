@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       image();
     });
-  window.image = function () {
+   window.image = function () {
     const Breed = document.getElementById("breeds").value;
     const dogImage = document.getElementById("dogImage");
     fetch(`https://dog.ceo/api/breed/${Breed}/images/random`)
@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
         dogImage.innerHTML = "";
         dogImage.appendChild(img);
         selected.textContent = `${Breed.toUpperCase()}`;
-
       });
   };
 });
+
+
