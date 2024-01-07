@@ -26,28 +26,27 @@ nav {
 
 .nav-container {
   display: flex;
-justify-content: center;
-align-items: center;
-gap: 5rem;
-margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
 }
 
-.nav-container input,
-.nav-container select {
+input, select {
   font-weight: 700;
   width: 410px;
   font-size: 30px;
   cursor: pointer;
   margin-top: 10.3rem;
-  background-color: #424242;
   border: 0;
   padding: 0.5rem;
   border-radius: 6px;
+  background-color: #ccad006a;
   color: #27ad15;
   box-shadow: 1px 1px 3px 10px rgba(255, 255, 0, 0.591);
 }
 
-.nav-container button {
+button {
   font-weight: 700;
   width: 300px;
   font-size: 30px;
@@ -70,19 +69,20 @@ select::-webkit-scrollbar-thumb {
   background-color: #ffd700;
 }
 
-.nav-container button:hover {
+button:hover {
   color: #fd004c;
   background-color: #7cff5e;
 
   box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
 }
 
-.nav-container input:hover {
-  background-color: #ccad006a;
+input:hover {
+  background-color: #424242;
   box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
 }
 
-.nav-container select:hover {
+select:hover {
+  background-color: #424242;
   box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
 }
 
