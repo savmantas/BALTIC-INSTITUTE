@@ -1,4 +1,3 @@
-let isModalOpen = false;
 const coctailNameFilterElement = document.querySelector("#coctail-name-filter"),
   categorySelectElement = document.querySelector("#category-select"),
   glassSelectElement = document.querySelector("#glass-type-select"),
