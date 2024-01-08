@@ -4,22 +4,25 @@ const coctailNameFilterElement = document.querySelector("#coctail-name-filter"),
   glassSelectElement = document.querySelector("#glass-type-select"),
   ingredientSelectElement = document.querySelector("#ingredient-select"),
   dynamicDrinksElement = document.querySelector(".drinks"),
-  buttonSearch = document.querySelector("#search");
+  buttonSearch = document.querySelector("#search"),
+  alphabetLinksElement = document.querySelector("#alphabet-links");
+
 const modal = document.querySelector(".modal-bg");
 const selectValues = {},
   drinksArray = [];
 
 function displayFilteredDrinks(filteredDrinks) {
   dynamicDrinksElement.innerHTML = "";
-  for (let drink of filteredDrinks) {
-    dynamicDrinksElement.innerHTML += `<div class="drink" data-idDrink="${drink.idDrink}" onclick="openModal(${drink.idDrink})">
-                    <img
-                        src="${drink.strDrinkThumb}"
-                        alt=""
-                    />
-                    <h2 class="drink-title">${drink.strDrink}</h2>
-                </div>`;
+  generateDrinksHTML(filteredDrinks);
+}
+
+function generateAlphabetLinks() {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let buttonsHTML = "";
+  for (let letter of alphabet) {
+    buttonsHTML += `<button href="#" onclick="filterByLetter('${letter}')">${letter}</button>`;
   }
+  alphabetLinksElement.innerHTML = buttonsHTML;
 }
 
 async function fillSelectElements() {
@@ -27,6 +30,7 @@ async function fillSelectElements() {
     "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list",
     "https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list",
     "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list",
+    "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a",
   ];
 
   const allPromises = allUrls.map((url) =>
@@ -57,6 +61,8 @@ async function fillSelectElements() {
     ingredientSelectElement,
     "strIngredient1"
   );
+
+  generateAlphabetLinks();
 }
 
 function fillCategorySelect(properties, selectElement, strFieldName) {
@@ -93,17 +99,22 @@ async function getAllDrinks() {
 }
 
 function generateDrinksHTML(drinks) {
-  let dynamicHTML = "";
+  dynamicDrinksElement.innerHTML = ""; // Clear previous content
+
   for (let drink of drinks) {
-    dynamicHTML += `<div class="drink" data-idDrink="${drink.idDrink}" onclick="openModal(${drink.idDrink})">
-                    <img
-                        src="${drink.strDrinkThumb}"
-                        alt=""
-                    />
-                    <h2 class="drink-title">${drink.strDrink}</h2>
-                </div>`;
+    const drinkElement = document.createElement("div");
+    drinkElement.classList.add("drink");
+    drinkElement.setAttribute("data-idDrink", drink.idDrink);
+
+    drinkElement.innerHTML = `
+      <img src="${drink.strDrinkThumb}" alt="" />
+      <h2 class="drink-title">${drink.strDrink}</h2>
+    `;
+
+    drinkElement.addEventListener("click", () => openModal(drink.idDrink));
+
+    dynamicDrinksElement.appendChild(drinkElement);
   }
-  dynamicDrinksElement.innerHTML = dynamicHTML;
 }
 
 async function filter() {
@@ -285,6 +296,20 @@ function saveToLocalStorage(key, data) {
 function getFromLocalStorage(key) {
   const data = localStorage.getItem(key);
   return data ? JSON.parse(data) : null;
+}
+
+async function filterByLetter(letter) {
+  try {
+    const response = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
+    );
+    const data = await response.json();
+    const drinksStartingWithLetter = data.drinks;
+    generateDrinksHTML(drinksStartingWithLetter);
+    saveToLocalStorage("filteredDrinks", drinksStartingWithLetter);
+  } catch (error) {
+    console.error("Error filtering drinks by letter:", error);
+  }
 }
 
 initialization();
