@@ -99,7 +99,7 @@ async function getAllDrinks() {
 }
 
 function generateDrinksHTML(drinks) {
-  dynamicDrinksElement.innerHTML = ""; // Clear previous content
+  dynamicDrinksElement.innerHTML = "";
 
   for (let drink of drinks) {
     const drinkElement = document.createElement("div");
