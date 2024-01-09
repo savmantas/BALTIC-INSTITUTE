@@ -306,11 +306,9 @@ async function filterByLetter(letter) {
     const data = await response.json();
     const drinksStartingWithLetter = data.drinks;
     generateDrinksHTML(drinksStartingWithLetter);
-    saveToLocalStorage("filteredDrinks", drinksStartingWithLetter);
   } catch (error) {
     console.error("Error filtering drinks by letter:", error);
   }
 }
 
 initialization();
-//SELECT HOVER!!!!!

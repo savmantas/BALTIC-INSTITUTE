@@ -47,7 +47,7 @@ select {
   border: 0;
   padding: 0.5rem;
   border-radius: 6px;
-  background-color: #ccad006a;
+  background-color:  #424242;
   color: #fddf00;
   box-shadow: 1px 1px 3px 10px rgba(255, 255, 0, 0.591);
 }
@@ -92,7 +92,7 @@ input:hover {
 select:hover {
   background-color: #424242;
   box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
-  color: #fd004c;
+  
 }
 
 .drinks {
