@@ -3,6 +3,8 @@ const coctailNameFilterElement = document.querySelector("#coctail-name-filter"),
   categorySelectElement = document.querySelector("#category-select"),
   glassSelectElement = document.querySelector("#glass-type-select"),
   ingredientSelectElement = document.querySelector("#ingredient-select"),
+  alcoholicSelectElement = document.querySelector("#alcoholic-select"),
+  nonAlcoholicSelectElement = document.querySelector("#non-alcoholic-select"),
   dynamicDrinksElement = document.querySelector(".drinks"),
   buttonSearch = document.querySelector("#search"),
   alphabetLinksElement = document.querySelector("#alphabet-links");
@@ -31,6 +33,8 @@ async function fillSelectElements() {
     "https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list",
     "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list",
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a",
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic",
   ];
 
   const allPromises = allUrls.map((url) =>
@@ -121,7 +125,9 @@ async function filter() {
   const searchValue = coctailNameFilterElement.value,
     category = categorySelectElement.value,
     glass = glassSelectElement.value,
-    ingredient = ingredientSelectElement.value;
+    ingredient = ingredientSelectElement.value,
+    alcoholic = alcoholicSelectElement.value,
+    nonAlcoholic = nonAlcoholicSelectElement.value;
 
   let filteredArray = [...drinksArray];
 
@@ -176,6 +182,30 @@ async function filter() {
     );
   }
 
+  if (alcoholic !== "Choose Alcoholic") {
+    const promise = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${alcoholic}`
+    );
+    const drinksOfAlcoholic = await promise.json();
+    filteredArray = filteredArray.filter((drink) =>
+      drinksOfAlcoholic.drinks.some(
+        (drinkOfAlcoholic) => drink.idDrink === drinkOfAlcoholic.idDrink
+      )
+    );
+  }
+
+  if (nonAlcoholic !== "Choose Non-Alcoholic") {
+    const promise = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${nonAlcoholic}`
+    );
+    const drinksOfNonAlcoholic = await promise.json();
+    filteredArray = filteredArray.filter((drink) =>
+      drinksOfNonAlcoholic.drinks.some(
+        (drinkOfNonAlcoholic) => drink.idDrink === drinkOfNonAlcoholic.idDrink
+      )
+    );
+  }
+
   generateDrinksHTML(filteredArray);
   saveToLocalStorage("filteredDrinks", filteredArray);
 }
@@ -211,53 +241,36 @@ async function initialization() {
   });
 }
 
-async function openModal(id) {
-  try {
-    if (isModalOpen) {
-      await closeModal();
-    }
+function checkIfLetter(char) {
+  return /^[a-zA-Z()]$/.test(char);
+}
 
-    modal.style.display = "flex";
-    isModalOpen = true;
+function filterByLetter(letter) {
+  if (checkIfLetter(letter)) {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const drinksStartingWithLetter = data.drinks;
+        generateDrinksHTML(drinksStartingWithLetter);
+      })
+      .catch((error) => {
+        console.error("Error filtering drinks by letter:", error);
+      });
+  }
+}
 
-    await clearModalContent();
+async function modalButtonClicked() {
+  const buttonText = document.querySelector("#modal-button").innerText;
+  closeModal();
 
-    const response = await fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
-    );
+  if (buttonText === "All Alcoholic Drinks") {
+    const response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic");
     const data = await response.json();
-    const drink = data.drinks[0];
-
-    if (drink) {
-      document.querySelector(".modal-img").src = drink.strDrinkThumb;
-      document.querySelector(".modal-title").innerText = drink.strDrink;
-      document.querySelector(
-        "#modal-category"
-      ).innerText = `${drink.strCategory}`;
-      document.querySelector(
-        "#modal-alcohol"
-      ).innerText = `${drink.strAlcoholic}`;
-      document.querySelector("#modal-glass").innerText = `${drink.strGlass}`;
-
-      const ingredientsContainer = document.querySelector("#modal-ingredients");
-      for (let i = 1; i <= 15; i++) {
-        const ingredient = drink[`strIngredient${i}`];
-        const measure = drink[`strMeasure${i}`];
-        if (ingredient && measure) {
-          const ingredientElement = document.createElement("p");
-          ingredientElement.classList.add("ingredient");
-          ingredientElement.innerHTML = `<b>${ingredient}:</b> <span>${measure}</span>`;
-          ingredientsContainer.appendChild(ingredientElement);
-        }
-      }
-      document.querySelector(
-        "#modal-recipe"
-      ).innerText = `${drink.strInstructions}`;
-    } else {
-      await closeModal();
-    }
-  } catch (error) {
-    await closeModal();
+    generateDrinksHTML(data.drinks);
+  } else if (buttonText === "All Non-Alcoholic Drinks") {
+    const response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic");
+    const data = await response.json();
+    generateDrinksHTML(data.drinks);
   }
 }
 
@@ -280,8 +293,7 @@ async function closeModal() {
 }
 
 async function displayRandomDrink() {
-  const randomDrinkUrl =
-    "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+  const randomDrinkUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
   const response = await fetch(randomDrinkUrl);
   const data = await response.json();
   const randomDrink = data.drinks[0];
@@ -298,16 +310,50 @@ function getFromLocalStorage(key) {
   return data ? JSON.parse(data) : null;
 }
 
-async function filterByLetter(letter) {
+async function openModal(id) {
   try {
-    const response = await fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
-    );
+    if (isModalOpen) {
+      await closeModal();
+    }
+
+    modal.style.display = "flex";
+    isModalOpen = true;
+
+    await clearModalContent();
+
+    const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
     const data = await response.json();
-    const drinksStartingWithLetter = data.drinks;
-    generateDrinksHTML(drinksStartingWithLetter);
+    const drink = data.drinks[0];
+
+    if (drink) {
+      document.querySelector(".modal-img").src = drink.strDrinkThumb;
+      document.querySelector(".modal-title").innerText = drink.strDrink;
+      document.querySelector("#modal-category").innerText = `${drink.strCategory}`;
+      document.querySelector("#modal-alcohol").innerText = `${drink.strAlcoholic}`;
+      document.querySelector("#modal-glass").innerText = `${drink.strGlass}`;
+
+      const ingredientsContainer = document.querySelector("#modal-ingredients");
+      for (let i = 1; i <= 15; i++) {
+        const ingredient = drink[`strIngredient${i}`];
+        const measure = drink[`strMeasure${i}`];
+        if (ingredient && measure) {
+          const ingredientElement = document.createElement("p");
+          ingredientElement.classList.add("ingredient");
+          ingredientElement.innerHTML = `<b>${ingredient}:</b> <span>${measure}</span>`;
+          ingredientsContainer.appendChild(ingredientElement);
+        }
+      }
+      document.querySelector("#modal-recipe").innerText = `${drink.strInstructions}`;
+
+      const modalButton = document.querySelector("#modal-button");
+      modalButton.innerText = `${drink.strAlcoholic === "Alcoholic" ? "All Alcoholic Drinks" : "All Non-Alcoholic Drinks"}`;
+
+      modalButton.addEventListener("click", modalButtonClicked);
+    } else {
+      await closeModal();
+    }
   } catch (error) {
-    console.error("Error filtering drinks by letter:", error);
+    await closeModal();
   }
 }
 

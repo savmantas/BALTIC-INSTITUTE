@@ -29,6 +29,9 @@
                     <p id="modal-alcohol"></p>
                 </div>
                 <div class="row">
+                    <button id="modal-button" onclick="modalButtonClicked()"></button>
+                </div>
+                <div class="row">
                     <b>Glass type:</b>
                     <p id="modal-glass"></p>
                 </div>
@@ -46,22 +49,28 @@
     <nav id="main-nav">
         <div class="nav-container">
             <div class="filter">
-            <input type="text" id="coctail-name-filter" placeholder="Filter By Name Of The Drink" />
-            <select id="category-select">
-                <option>Choose Category</option>
-            </select>
-            <select id="glass-type-select">
-                <option>Choose Glass Type</option>
-            </select>
-            <select id="ingredient-select">
-                <option>Choose Ingredient</option>
-            </select>
-            <button id="search">SEARCH</button>
-            <button id="im-lucky">I'm Lucky!</button>
-        </div>
+                <input type="text" id="coctail-name-filter" placeholder="Filter By Name Of The Drink" />
+                <select id="category-select">
+                    <option>Choose Category</option>
+                </select>
+                <select id="glass-type-select">
+                    <option>Choose Glass Type</option>
+                </select>
+                <select id="ingredient-select">
+                    <option>Choose Ingredient</option>
+                </select>
+                <select id="alcoholic-select">
+                    <option>Choose Alcoholic</option>
+                </select>
+                <select id="non-alcoholic-select">
+                    <option>Choose Non-Alcoholic</option>
+                </select>
+                <button id="search">SEARCH</button>
+                <button id="im-lucky">I'm Lucky!</button>
+            </div>
             <h1>👇 FILTER BY FIRST LETTER OF THE DRINK 👇 </h1>
             <div class="alphabet" id="alphabet-links">
-        </div>
+            </div>
         </div>
     </nav>
     <div class="container drinks" id="drinks">
