@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="cocktails.css" />
 </head>
-
 <body>
     <div class="modal-bg">
         <div class="modal">
@@ -28,7 +26,7 @@
                     <b>Alcohol:</b>
                     <p id="modal-alcohol"></p>
                 </div>
-                <div class="">
+                <div class="modal-list-button">
                     <button id="modal-button" onclick="modalButtonClicked()"></button>
                 </div>
                 <div class="row">
@@ -49,7 +47,7 @@
     <nav id="main-nav">
         <div class="nav-container">
             <div class="filter">
-                <input type="text" id="coctail-name-filter" placeholder="Filter By Name Of The Drink" />
+                <input type="text" id="coctail-name-filter" placeholder="Search Cocktails By Name" />
                 <select id="category-select">
                     <option>Choose Category</option>
                 </select>
@@ -59,8 +57,14 @@
                 <select id="ingredient-select">
                     <option>Choose Ingredient</option>
                 </select>
+                <select id="alcohol-type-select">
+                    <option>Choose Alcohol Type</option>
+                    <option value="Alcoholic">Alcoholic</option>
+                    <option value="Non_Alcoholic">Non - Alcoholic</option>
+                </select>
                 <button id="search">SEARCH</button>
                 <button id="im-lucky">I'm Lucky!</button>
+                <button id="reset" onclick="resetPage()">RESET</button>
             </div>
             <h1>👇 LIST ALL COCKTAILS BY FIRST LETTER 👇 </h1>
             <div class="alphabet" id="alphabet-links"></div>
@@ -69,5 +73,4 @@
     <div class="container drinks" id="drinks"></div>
     <script src="cocktails.js"></script>
 </body>
-
 </html>
