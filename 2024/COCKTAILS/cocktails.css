@@ -92,7 +92,7 @@ input:hover {
 select:hover {
   background-color: #424242;
   box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
-  
+
 }
 
 .drinks {
@@ -226,4 +226,12 @@ select:hover {
 .filter {
   display: flex;
   justify-content: space-between;
+}
+
+.modal-button{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
