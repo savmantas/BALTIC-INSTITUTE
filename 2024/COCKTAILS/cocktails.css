@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  max-width: 2500px;
+  max-width: 2800px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -23,7 +23,7 @@ nav {
 }
 
 .nav-container {
-  max-width: 2500px;
+  max-width: 2800px;
   margin: 0 auto;
   margin-top: 3.8rem;
   text-align: center;
@@ -152,11 +152,11 @@ select:hover {
   position: absolute;
   font-size: 25px;
   background-color: #010d13c2;
-  max-width: 30vw;
+  width: 20%;
   max-height: 80vh;
   padding: 1.5rem;
   overflow-y: scroll;
-  color: #93880c;
+  color: #ffd700;
   z-index: 3;
 }
 
@@ -234,9 +234,12 @@ select:hover {
   text-align: center;
 }
 
-.modal-list-button {
-  display: flex;
-  justify-content: end;
-  margin: 1rem;
-  border-bottom: 5px solid rgb(15, 18, 130);
+#message-container {
+  margin-top: 3rem;
+  width: 100%;
+  border-radius: 2rem;
+  font-size: 10rem;
+  color: #a4070c;
+  background-color: #1ca005;
+  box-shadow:  inset 1px 1px 3px 10px rgb(255, 255, 91);
 }

@@ -26,9 +26,6 @@
                     <b>Alcohol:</b>
                     <p id="modal-alcohol"></p>
                 </div>
-                <div class="modal-list-button">
-                    <button id="modal-button" onclick="modalButtonClicked()"></button>
-                </div>
                 <div class="row">
                     <b>Glass type:</b>
                     <p id="modal-glass"></p>
@@ -62,12 +59,14 @@
                     <option value="Alcoholic">Alcoholic</option>
                     <option value="Non_Alcoholic">Non - Alcoholic</option>
                 </select>
-                <button id="search">SEARCH</button>
-                <button id="im-lucky">I'm Lucky!</button>
-                <button id="reset" onclick="resetPage()">RESET</button>
+
+                <button id="search">SEARCH 🔍</button>
+                <button id="reset" onclick="resetPage()">RESET 🔃</button>
+                <button id="im-lucky">I'm Lucky! 🍀</button>
             </div>
             <h1>👇 LIST ALL COCKTAILS BY FIRST LETTER 👇 </h1>
             <div class="alphabet" id="alphabet-links"></div>
+            <div id="message-container"></div>
         </div>
     </nav>
     <div class="container drinks" id="drinks"></div>
