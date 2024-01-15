@@ -8,123 +8,88 @@ body {
 }
 
 .container {
-  max-width: 2800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 nav {
   width: 100%;
   height: 200px;
   background-image: url(images/welcome.png);
-  background-size: 100% 100%;
+  background-size: cover;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .nav-container {
-  max-width: 2800px;
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 3.8rem;
+  margin-top: 1.8rem;
   text-align: center;
 }
 
 .nav-container h1 {
   border-radius: 6px;
-  font-size: 50px;
+  font-size: 2rem;
   background-color: #1ca005;
   color: #fddf00;
-  box-shadow: 1px 1px 3px 10px rgb(255, 255, 91);
+  box-shadow: 1px 1px 3px 5px rgb(255, 255, 91);
 }
 
 input,
 select {
-  width: 360px;
+  width: 100%;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1rem;
   cursor: pointer;
-  margin-top: 10.3rem;
+  margin-top: 0.5rem;
   border: 0;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 6px;
   background-color: #424242;
   color: #fddf00;
-  box-shadow: 1px 1px 3px 10px rgba(255, 255, 0, 0.591);
+  box-shadow: 1px 1px 3px 5px rgba(255, 255, 0, 0.591);
 }
 
 button {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.1rem;
   background-color: #1ca005;
   border: none;
   border-radius: 4px;
   color: #fddf00;
-  padding: 0.4rem 1rem;
+  padding: 0.2rem 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  box-shadow: 1px 1px 3px 10px rgb(255, 255, 91);
+  box-shadow: 1px 1px 3px 5px rgb(255, 255, 91);
 }
 
 .filter button {
-  margin-top: 10.3rem;
-  width: 250px;
-}
-select::-webkit-scrollbar {
-  width: 15px;
-  background-color: #20e70662;
+  margin-top: 0.5rem;
 }
 
-select::-webkit-scrollbar-thumb {
-  background-color: #ffd700;
-}
-
-button:hover {
-  color: #fd004c;
-  background-color: #7cff5e;
-  box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
-}
-
-input:hover {
-  background-color: #424242;
-  box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
-}
-
-select:hover {
-  background-color: #424242;
-  box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
+.select-container {
+  width: 100%;
 }
 
 .drinks {
-  margin-top: 20rem;
+  margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .drink {
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 0 auto;
   background-color: #1a1835d1;
   color: #168d26;
   overflow: hidden;
-  box-shadow: 1px 1px 3px 10px rgba(255, 23, 240, 0.613);
+  box-shadow: 1px 1px 3px 5px rgba(255, 23, 240, 0.613);
   cursor: pointer;
-  transition: 1s ease-in-out;
-}
-
-.drink:hover {
-  border-radius: 0px;
-  color: rgba(255, 23, 240, 0.613);
-  transform: scale(1.15);
   transition: 0.3s ease-in-out;
-  box-shadow: 1px 1px 3px 10px rgba(7, 224, 61, 0.744);
-}
-
-.drink:hover img {
-  position: relative;
-  transform: scale(1.1);
-  transition: 2s;
 }
 
 .drink img {
@@ -150,40 +115,27 @@ select:hover {
 
 .modal {
   position: absolute;
-  font-size: 25px;
+  font-size: 1rem;
   background-color: #010d13c2;
-  width: 20%;
+  width: 90%;
   max-height: 80vh;
-  padding: 1.5rem;
+  padding: 1rem;
   overflow-y: scroll;
   color: #ffd700;
   z-index: 3;
 }
 
-.modal::-webkit-scrollbar {
-  width: 4px;
-  background-color: #362e01;
-}
-
-.modal::-webkit-scrollbar-thumb {
-  background-color: #ffd700;
-}
-
 .modal-close-button {
   color: #4854ff;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  font-size: 35px;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
-.modal-close-button:hover {
-  color: red;
-}
-
 .modal-img {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: block;
   border-radius: 8px;
@@ -193,17 +145,17 @@ select:hover {
   border-bottom: 5px solid rgb(15, 18, 130);
   align-items: baseline;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .row p {
-  width: 70%;
+  width: 100%;
   text-align: left;
   color: #fff;
 }
 
 .ingredients {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -212,34 +164,61 @@ select:hover {
 .modal-title {
   text-decoration: underline;
   text-align: center;
-  font-size: 40px;
+  font-size: 1.5rem;
   color: #ffd700;
 }
 
 .alphabet {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
 }
 
 .filter {
   display: flex;
-  justify-content: space-between;
-}
-
-.modal-button {
-  width: 100px;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 #message-container {
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 100%;
-  border-radius: 2rem;
-  font-size: 10rem;
+  border-radius: 1rem;
+  font-size: 2rem;
   color: #a4070c;
   background-color: #1ca005;
-  box-shadow:  inset 1px 1px 3px 10px rgb(255, 255, 91);
+  box-shadow: inset 1px 1px 3px 5px rgb(255, 255, 91);
+}
+
+
+@media screen and (max-width: 767px) {
+  .nav-container h1 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .drinks {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .drink {
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    font-size: 0.9rem;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
 }
