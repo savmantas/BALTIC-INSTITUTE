@@ -4,27 +4,25 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
 table {
   width: 100%;
   margin-bottom: 2rem;
 }
+
 td {
   text-align: center;
 }
-.space-right {
+
+.space-right{
   margin-right: 1rem;
 }
-form div {
-  width: 30%;
+
+form div{
+  width: 40%;
 }
-div label {
+div label{
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-}
-h1{
-  color: rgb(20, 37, 121);
-}
-body {
-  background-color: antiquewhite;
 }

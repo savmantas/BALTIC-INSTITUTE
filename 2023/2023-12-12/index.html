@@ -9,56 +9,59 @@
 </head>
 
 <body>
-
-    <h1>People data base</h1>
-
+    <h2>Add</h2>
     <table>
         <thead>
-            <tr class>
-                <th>#N.O.</th>
+            <tr>
+                <th>#</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
                 <th>Nationality</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mantas</td>
+                <td>Savickas</td>
+                <td>36</td>
+                <td>Lithuanian</td>
+            </tr>
+        </tbody>
     </table>
     <form>
         <div>
             <label>
                 <span class="space-right">First Name</span>
-                <input type="text" placeholder="First Name" id="firstNameInput" />
+                <input type="text" placeholder="First Name" id="firstNameInput">
             </label>
         </div>
         <div>
             <label>
                 <span class="space-right">Last Name</span>
-                <input type="text" placeholder="Last Name" id="lastNameInput" />
+                <input type="text" placeholder="Last Name" id="lastNameInput">
             </label>
         </div>
         <div>
             <label>
                 <span class="space-right">Age</span>
-                <input type="text" placeholder="Age" id="ageInput" />
+                <input type="text" placeholder="Age" id="ageInput">
             </label>
         </div>
         <div>
             <label>
                 <span class="space-right">Nationality</span>
-                <input type="text" placeholder="Nationality" id="nationalityInput" />
+                <input type="text" placeholder="Nationality" id="nationalityInput">
             </label>
         </div>
     </form>
     <div>
-
         <button id="add-button">Add</button>
     </div>
-
     <h2>Delete</h2>
-    <input type="number" placeholder="Number" />
-    <button id="removeButton">Delete</button>
-
+    <input type="number" placeholder="Number"/>
+    <button id="delete-button">Delete</button>
     <script src="dynamicContent.js"></script>
 </body>
 
