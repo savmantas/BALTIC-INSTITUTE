@@ -42,11 +42,6 @@ h1 {
     content: "\f068";
 }
 
-.active {
-    font-family: "Font Awesome 5 free";
-    font-weight: 900;
-}
-
 .desc{
     max-height: 0;
     overflow: hidden;
