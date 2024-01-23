@@ -88,34 +88,6 @@
 //   console.log("Welcome!");
 // } else console.log("Sorry, You are not on the list.");
 
-// let output = [];
-// let count = 1;
-
-// function fizzBuzz() {
-//   while (count <= 100) {
-//     output.push(count++);
-//     if (count % 3 === 0 && count % 5 !== 0) {
-//       output.pop;
-//       output.push("Fizz");
-//       count++;
-//       if (count % 5 === 0 && count % 3 !== 0) {
-//         output.pop;
-//         output.push("Buzz");
-//         count++;
-//       }
-//     }
-//     if (count % 3 === 0 && count % 5 === 0) {
-//       output.pop;
-//       output.push("FizzBuzz");
-//       count++;
-//     }
-//   }
-// }
-
-// fizzBuzz();
-
-// console.log(output);
-
 // names = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
 // function whosPaying(names) {
 //   numberOfPeople = names.length;
@@ -143,4 +115,108 @@
 // output = fibonacciGenerator(10)
 // console.log(output);
 
+// const objektas = {
+//     spalva: 'raudona',
+//     sayHello(){
+//         console.log('hello');
+//     },
+//     hello: ()=>{
+//         console.log('hellos');
+//     },
+//     hi: function(){
+//         console.log('hi');
+//     }
+// }
 
+// objektas.hi();
+
+// class Person {
+// static countOfPeople = 0;
+//   constructor(name, height) {
+//     console.log("name: " + name);
+//     console.log("height: " + height);
+//     this.name = name;
+//     this.height = height;
+//     this.nationality = "Lithuanian";
+//     Person.countOfPeople++;
+//   }
+
+//   sayHello() {
+//     console.log(`Labas, as ${this.name}.`);
+//   }
+
+//   static countArea(height, width) {
+//     console.log(height * width);
+//   }
+// }
+
+// const petras = new Person("Petras", 1.87);
+// const egle = new Person("Egle", 1.71);
+// console.log(petras);
+// console.log(egle);
+// petras.sayHello();
+// egle.sayHello();
+// Person.countArea(4, 5);
+// console.log(Person.countOfPeople);
+
+// let output = [];
+// let count = 0;
+
+// function fizzBuzz() {
+//     count++;
+//     console.log(output);
+//     if (count % 3 === 0 && count % 5 ===0) {
+//         output.push('FizzBuzz')
+//     }
+//     else if (count % 3 === 0){
+//         output.push('Fizz')
+//     }
+//     else if (count % 5 === 0){
+//         output.push('Buzz')
+//     }
+//     else output.push(count);
+// }
+
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+// fizzBuzz();
+
+// let people = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
+
+// function whosPaying(people) {
+//   let numberOfPeople = people.length;
+//   let randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+//   let randomPerson = people[randomPersonPosition];
+//   return randomPerson;
+// }
+
+// console.log(whosPaying(people));
