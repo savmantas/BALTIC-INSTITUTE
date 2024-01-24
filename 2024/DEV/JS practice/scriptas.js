@@ -98,22 +98,7 @@
 // }
 // console.log(whosPaying(names));
 
-// function fibonacciGenerator(n) {
-//   let output = [];
-//   if (n === 1) {
-//     output = [0];
-//   } else if (n === 2) {
-//     output = [0, 1];
-//   } else {
-//     output = [0, 1];
-//     for (let i = 2; i < n; i++) {
-//       output.push(output[output.length - 2] + output[output.length - 1]);
-//     }
-//   }
-//   return output;
-// }
-// output = fibonacciGenerator(10)
-// console.log(output);
+
 
 // const objektas = {
 //     spalva: 'raudona',
@@ -160,54 +145,21 @@
 // console.log(Person.countOfPeople);
 
 // let output = [];
-// let count = 0;
 
 // function fizzBuzz() {
-//     count++;
-//     console.log(output);
-//     if (count % 3 === 0 && count % 5 ===0) {
-//         output.push('FizzBuzz')
+//   for (let count = 1; count <= 100; count++) {
+//     if (count % 3 === 0 && count % 5 === 0) {
+//       output.push("FizzBuzz");
+//     } else if (count % 3 === 0) {
+//       output.push("Fizz");
+//     } else if (count % 5 === 0) {
+//       output.push("Buzz");
+//     } else {
+//       output.push(count);
 //     }
-//     else if (count % 3 === 0){
-//         output.push('Fizz')
-//     }
-//     else if (count % 5 === 0){
-//         output.push('Buzz')
-//     }
-//     else output.push(count);
+//   }
+//   console.log(output);
 // }
-
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
-// fizzBuzz();
 // fizzBuzz();
 
 // let people = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
@@ -220,3 +172,24 @@
 // }
 
 // console.log(whosPaying(people));
+
+
+// function fibonacciGenerator(n) {
+//   let output = [];
+//   if (n === 1) {
+//     output = [0];
+//   } else if (n === 2) {
+//     output = [0, 1];
+//   } else {
+//     output = [0, 1];
+//     for (let i = 2; i < n; i++) {
+//       output.push(output[output.length - 2] + output[output.length - 1]);
+//     }
+//   }
+//   return output;
+// }
+// output = fibonacciGenerator(20)
+// console.log(output);
+
+
+
