@@ -98,8 +98,6 @@
 // }
 // console.log(whosPaying(names));
 
-
-
 // const objektas = {
 //     spalva: 'raudona',
 //     sayHello(){
@@ -173,7 +171,6 @@
 
 // console.log(whosPaying(people));
 
-
 // function fibonacciGenerator(n) {
 //   let output = [];
 //   if (n === 1) {
@@ -191,5 +188,25 @@
 // output = fibonacciGenerator(20)
 // console.log(output);
 
+// function HouseKeeper(name, secondName, yearsOfExperience, languages) {
+//   this.name = name;
+//   this.secondName = secondName;
+//   this.yearsOfExperience = yearsOfExperience;
+//   this.languages = languages;
+//   this.clean = function () {
+//     alert("Cleaning up...");
+//   };
+// }
 
+// let houseKeeper1 = new HouseKeeper("emilija", "savickaite", 2, [
+//   "lithuanian",
+//   "english",
+// ]);
+// console.log(houseKeeper1);
+// let houseKeeper2 = new HouseKeeper("mantas", "savickas", 15, [
+//   "lithuanian",
+//   "russian",
+// ]);
+// console.log(houseKeeper2);
 
+// houseKeeper2.clean();
