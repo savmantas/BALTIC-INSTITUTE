@@ -210,3 +210,23 @@
 // console.log(houseKeeper2);
 
 // houseKeeper2.clean();
+
+//--------------------- JQuery -----------------------
+
+// $("h1").css("color", "white");
+// $("h1").text("Bye");
+
+// $("button").click(function () {
+//   $("h1").animate({opacity: 0.5});
+// });
+
+// $(document).keypress(function (event) {
+//   $("h1").text(event.key);
+// });
+
+// $("h1").on("mouseover", function () {
+//   $("h1").css("color", "red");
+// });
+
+
+// $('h1').before('<button>New</button>');
