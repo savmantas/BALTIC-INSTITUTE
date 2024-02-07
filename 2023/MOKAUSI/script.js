@@ -181,18 +181,64 @@
 
 //------------------------Object methods------------------------
 
-const mantas = {
-  firstName: "Mantas",
-  lastName: "Savickas",
-  birthYear: 1987,
-  job: "student",
-  friends: ["Mantas", "Tomas", "Audrius"],
-  hasDriversLicense: true,
-  // calcAge: function (birthYear) {
-  //   return 2024 - birthYear;
-  // },
-  calcAge: function (){
-    return 2024 - this.birthYear;
-  }
-};
-console.log(mantas.calcAge());
+// const mantas = {
+//   firstName: "Mantas",
+//   lastName: "Savickas",
+//   birthYear: 1987,
+//   job: "student",
+//   friends: ["Mantas", "Tomas", "Audrius"],
+//   hasDriversLicense: true,
+//   // calcAge: function (birthYear) {
+//   //   return 2024 - birthYear;
+//   // },
+//   // calcAge: function (){
+//   //   return 2024 - this.birthYear;
+//   // }
+//   calcAge: function () {
+//     this.age = 2024 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstName} is as ${this.calcAge()}-years old ${
+//       this.job
+//     }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   },
+// };
+
+// console.log(mantas.getSummary());
+
+// // console.log(mantas.calcAge());
+// // console.log(mantas.age);
+
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+// mark.calcBMI();
+// john.calcBMI();
+// console.log(
+//   `${mark.fullName}'s BMI (${mark.bmi}) ${
+//     john.bmi > mark.bmi ? "is lower" : " is higher"
+//   } than ${john.fullName}'s (${john.bmi})!`
+// );
+
+
+//----------------------FOR loop------------------------
+
+for(let rep = 1; rep <=10; rep++) {
+  console.log(rep);
+}
