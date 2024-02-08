@@ -1,3 +1,5 @@
+'use strict';
+
 //-------------------------FUNCTIONS----------------------
 
 // function fruitProcessor(apples, oranges){
@@ -331,11 +333,100 @@
 
 //----------------------------------------------------------------
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
 
+// function calcTip(bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+// for (let i = 0; i < bills.length; i++){
+//   if(bills[i] >= 50 && bills[i] <= 300){
+//     tips.push(bills[i] * 0.15);
+//     totals.push(bills[i] + tips[i]);
+//   }
+//   else {
+//     tips.push(bills[i] * 0.2);
+//     totals.push(bills[i] + tips[i]);
+//   }
+// }
 
-function calcTip(bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// let sum = 0;
+
+// function calcAverage(arr){
+//   for (let i = 0; i < arr.length; i++){
+//     sum += arr[i];
+//   }
+//   return sum / arr.length;
+// }
+
+// console.log(tips);
+// console.log(totals);
+// console.log(calcAverage(tips));
+
+//--------finding max and min, ignoring error, merge() 2 arrays----------
+
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const calcTempAmplitude = function (temps) {
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
+//     if (typeof curTemp !== 'number') continue;
+//     if (curTemp > max) {
+//       max = curTemp;
+//     }
+//     if (curTemp < min) {
+//       min = curTemp;
+//     }
+//   }
+//   console.log(min, max);
+//   return max - min;
+// };
+// const amplitude = calcTempAmplitude(temperatures);
+// console.log(amplitude);
+
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temperatures2 = [9, -5, -6, -1, 'error', 9, 23, 17, 19, 14, 9, 5];
+// const calcTempAmplitudeNew = function (t1,t2) {
+// const temps = t1.concat(t2);
+// console.log(temps);
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
+//     if (typeof curTemp !== 'number') continue;
+//     if (curTemp > max) {
+//       max = curTemp;
+//     }
+//     if (curTemp < min) {
+//       min = curTemp;
+//     }
+//   }
+//   console.log(min, max);
+//   return max - min;
+// };
+// const amplitudeNew = calcTempAmplitudeNew(temperatures,temperatures2);
+// console.log(amplitudeNew);
+
+// function measureKelvin() {
+//   const measurment = {
+//     type: 'temp',
+//     unit: 'celcius',
+//     value: Number (prompt('Degrees celsius:')),
+//   };
+//   const kelvin = measurment.value + 273;
+//   return kelvin;
+// }
+// console.log(measureKelvin());
+
+//----------------------------------------------------------------
+
+function printForecast(arr){
+    for (let i = 0; i < arr.length; i++){
+        let val = arr[i] + val;
+        console.log(val);
+    }
 }
+
+printForecast([17,21,23])
