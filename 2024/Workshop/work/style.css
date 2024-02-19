@@ -1,6 +1,6 @@
 
 html{
-    background-color: rgba(0, 0, 0, 0.31);
+    background-color: rgba(157, 10, 10, 0.31);
 }
 
 .container{
@@ -10,11 +10,13 @@ html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 p{
+
     position: absolute;
-    bottom: 300px;
+    bottom: 500px;
     font-size: 32px;
     width: 600px;
     flex-wrap: wrap;
